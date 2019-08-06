@@ -154,16 +154,16 @@
             </div>
             <div class="form-row">
                 <div class="form-group col-md-5">
-
-                    <input type="text" class="franqueado form-control" id="">
+                    <label class="franqueado">Outro franqueado</label>
+                    <input class="franqueado form-control" id="">
                 </div>
                 <div class="form-group col-md-4">
-
-                    <input type="email" class="franqueado form-control" id="">
+                    <label class="franqueado" for="">E-mail</label>
+                    <input class="franqueado form-control" id="">
                 </div>
                 <div class="form-group col-md-3">
-
-                    <input type="number" class="franqueado form-control" id="">
+                    <label class="franqueado" for="">Telefone</label>
+                    <input class="franqueado form-control" id="">
                 </div>
             </div>
             <div id="cadastrarFraquiados">
