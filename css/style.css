@@ -1,0 +1,47 @@
+    /* Limpar padrões do navegador*/
+    body {
+        border: 0;
+        margin: 0;
+        padding: 0;
+        text-decoration: none;
+        list-style: none;
+    }
+
+    #menu {
+        background-color: rgba(73, 29, 86, 1);
+    }
+
+    #home {
+        margin-left: 100px !important;
+    }
+
+    #logo {
+        height: 100px;
+        width: 65px;
+    }
+
+    #menu a {
+        text-decoration: none;
+        color: white;
+        margin: 0 20px;
+        font-size: 28px;
+        font-family: 'Ubuntu', sans-serif;
+    }
+
+    #menu a:hover {
+        color: rgba(198, 191, 191, 0.66);
+    }
+
+    #deslogado {
+        font-size: 25px;
+        color: rgba(235, 55, 55, 0.79);
+    }
+
+    #deslogadoPalavra {
+        display: inline-block;
+
+    }
+
+    #carousel {
+        height: auto;
+    }

@@ -1,0 +1,42 @@
+footer {
+    background-color: #491d56;
+    color: white;
+    text-align: center;
+    clear: both;
+    font-family: 'Ubuntu', sans-serif;
+    padding: 10px 0px;
+}
+
+#logoRodape {
+    height: 70px;
+    width: 35px;
+    margin-right: 12px;
+}
+
+#whatsapp {
+    width: 40px;
+    height: 40px;
+}
+
+.fa-facebook-f {
+    font-size: 40px;
+}
+
+.fa-whatsapp {
+    font-size: 40px;
+}
+
+.fa-instagram {
+    font-size: 40px;
+}
+
+a,
+i {
+    text-decoration: none;
+    color: white;
+    margin-right: 12px;
+}
+
+h6 {
+    display: inline-block;
+}
