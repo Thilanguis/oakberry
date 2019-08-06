@@ -23,7 +23,7 @@
     #menu a {
         text-decoration: none;
         color: white;
-        margin: 0 20px;
+        margin: 0 60px;
         font-size: 28px;
         font-family: 'Ubuntu', sans-serif;
     }
@@ -39,9 +39,17 @@
 
     #deslogadoPalavra {
         display: inline-block;
-
     }
 
     #carousel {
         height: auto;
+    }
+
+    h5 {
+        text-align: center;
+        margin: 15px 0 25px 0;
+    }
+
+    #loginFranqueados {
+        text-align: right;
     }

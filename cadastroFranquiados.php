@@ -167,7 +167,7 @@
                 </div>
             </div>
             <div id="cadastrarFraquiados">
-                <button type="submit" class="btn btn-light">Cadastrar</button>
+                <button type="submit" class="btn btn-outline-dark">Cadastrar</button>
             </div>
         </form>
     </div>
