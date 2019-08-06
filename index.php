@@ -21,18 +21,26 @@
 
     <div id="carousel">
         <!-- carrosel -->
-        <div class="carousel slide" data-ride="carousel">
-            <div id="carousel" class="carousel-inner">
+        <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner">
                 <div class="carousel-item active">
-                    <img src="img/bg-oak.jpg" class="d-block w-100" alt="...">
+                    <img class="d-block w-100" src="img/bg-oak.jpg" alt="First slide">
                 </div>
                 <div class="carousel-item">
-                    <img src="img/OAK-ImagemSite-1.jpg" class="d-block w-100" alt="...">
+                    <img class="d-block w-100" src="img/OAK-ImagemSite-1.jpg" alt="Second slide">
                 </div>
                 <div class="carousel-item">
-                    <img src="img/OAK-ImagemSite-2.jpg" class="d-block w-100" alt="...">
+                    <img class="d-block w-100" src="img/OAK-ImagemSite-2.jpg" alt="Third slide">
                 </div>
             </div>
+            <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
         </div>
     </div>
 

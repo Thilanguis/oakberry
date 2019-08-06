@@ -4,7 +4,7 @@
     <img id="logo" src="img/oak-retina.png" alt="">
 
     <a class="btn-none" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-        login
+        Login
     </a>
 
     <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
