@@ -29,3 +29,13 @@ body {
 #cadastrarFraquiados {
     text-align: right;
 }
+
+#adicionar {
+    height: 22px;
+    width: 22px;
+}
+
+#remover {
+    height: 20px;
+    width: 20px;
+}
