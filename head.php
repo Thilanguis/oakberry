@@ -11,6 +11,7 @@
 <!--link do fontawsome-->
 
 <link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/styleHeader.css">
 <link rel="stylesheet" href="css/styleFooter.css">
 
 <script src="js/action.js"></script>
