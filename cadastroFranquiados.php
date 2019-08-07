@@ -22,11 +22,35 @@
     ?>
 
     <div class="container" id="cadastro">
-        <h4>Cadastro de franquiados</h4>
+        <h4>Cadastro de franqueados</h4>
         <form>
-            <div class="form-group">
-                <label for="inputAddress">Nome completo</label>
-                <input type="text" class="form-control" id="inputAddress" placeholder="">
+            <div class="form-row">
+                <div class="form-group col-md-5">
+                    <label for="inputCity">Franqueado</label>
+                    <input type="text" class="form-control" id="franqueado">
+                </div>
+                <div class="form-group col-md-4">
+                    <label for="inputState">E-mail</label>
+                    <input type="email" class="form-control" id="email">
+                </div>
+                <div class="form-group col-md-3">
+                    <label for="inputZip">Telefone</label> <img id="adicionar" class="adicionar" src="img/icons8-adicionar-48.png" alt=""> <img id="remover" class="remover" src="img/icons8-menos-64.png" alt="">
+                    <input type="number" class="form-control" id="telefone">
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-5">
+                    <label class="franqueado">Outro franqueado</label>
+                    <input class="franqueado form-control" id="">
+                </div>
+                <div class="form-group col-md-4">
+                    <label class="franqueado" for="">E-mail</label>
+                    <input class="franqueado form-control" id="">
+                </div>
+                <div class="form-group col-md-3">
+                    <label class="franqueado" for="">Telefone</label>
+                    <input class="franqueado form-control" id="">
+                </div>
             </div>
             <div class="form-row">
                 <div class="form-group col-md-6">
@@ -139,35 +163,7 @@
                     <input type="number" class="form-control" id="inputPassword4" placeholder="">
                 </div>
             </div>
-            <div class="form-row">
-                <div class="form-group col-md-5">
-                    <label for="inputCity">Franqueado</label>
-                    <input type="text" class="form-control" id="franqueado">
-                </div>
-                <div class="form-group col-md-4">
-                    <label for="inputState">E-mail</label>
-                    <input type="email" class="form-control" id="email">
-                </div>
-                <div class="form-group col-md-3">
-                    <label for="inputZip">Telefone</label> <img id="adicionar" class="adicionar" src="img/icons8-adicionar-48.png" alt=""> <img id="remover" class="remover" src="img/icons8-menos-64.png" alt="">
-                    <input type="number" class="form-control" id="telefone">
-                </div>
-            </div>
-            <div class="form-row">
-                <div class="form-group col-md-5">
-                    <label class="franqueado">Outro franqueado</label>
-                    <input class="franqueado form-control" id="">
-                </div>
-                <div class="form-group col-md-4">
-                    <label class="franqueado" for="">E-mail</label>
-                    <input class="franqueado form-control" id="">
-                </div>
-                <div class="form-group col-md-3">
-                    <label class="franqueado" for="">Telefone</label>
-                    <input class="franqueado form-control" id="">
-                </div>
-            </div>
-            <div id="cadastrarFraquiados">
+            <div id="btnCadastrarFraquiados">
                 <button type="submit" class="btn btn-outline-dark">Cadastrar</button>
             </div>
         </form>
