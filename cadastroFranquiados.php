@@ -7,10 +7,11 @@
     <!--font da google-->
     <link href="https://fonts.googleapis.com/css?family=Ubuntu&display=swap" rel="stylesheet">
 
-
     <?php
     include_once 'head.php';
     ?>
+
+    <link rel="stylesheet" href="css/styleCadastro.css">
 
 </head>
 

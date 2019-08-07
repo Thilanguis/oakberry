@@ -11,6 +11,8 @@
     include_once 'head.php';
     ?>
 
+    <link rel="stylesheet" href="css/styleAdministrador.css">
+
 </head>
 
 <body>

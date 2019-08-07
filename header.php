@@ -17,10 +17,10 @@
             </div>
             <div class="form-group">
                 <label for="exampleDropdownFormPassword1">Senha</label>
-                <input type="password" class="form-control" id="exampleDropdownFormPassword1" placeholder="Password">
+                <input type="password" class="form-control" id="exampleDropdownFormPassword1" placeholder="********">
             </div>
             <div id="loginFranqueados">
-                <button type="submit" class="btn btn-dark">Entrar</button>
+                <button type="submit" class="btn btn-outline-dark">Entrar</button>
             </div>
         </form>
         <div class="dropdown-divider"></div>

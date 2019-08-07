@@ -5,14 +5,16 @@
         padding: 0;
         text-decoration: none;
         list-style: none;
+        font-family: 'Ubuntu', sans-serif;
     }
 
     #menu {
         background-color: rgba(73, 29, 86, 1);
+        text-align: center;
     }
 
     #home {
-        margin-left: 100px !important;
+        margin-left: 120px !important;
     }
 
     #logo {
@@ -25,7 +27,6 @@
         color: white;
         margin: 0 60px;
         font-size: 28px;
-        font-family: 'Ubuntu', sans-serif;
     }
 
     #menu a:hover {

@@ -11,8 +11,6 @@
 <!--link do fontawsome-->
 
 <link rel="stylesheet" href="css/style.css">
-<link rel="stylesheet" href="css/styleCadastro.css">
 <link rel="stylesheet" href="css/styleFooter.css">
-<link rel="stylesheet" href="css/styleAdministrador.css">
 
 <script src="js/action.js"></script>
