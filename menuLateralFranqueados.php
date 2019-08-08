@@ -9,24 +9,24 @@
         <div class="tools tools--hidden">
             <!-- Carrinho icon fontawsome-->
             <a href="#">
-                <i class="fas fa-shopping-cart carrinho icon"></i>
+                <i class="fas fa-shopping-cart carrinho icon" title="Fazer seus pedidos"></i>
             </a>
 
             <!-- Dúvidas icon fontawsome-->
             <a href="#">
-                <i class="fas fa-question question icon"></i>
+                <i class="fas fa-question question icon" title="Tirar suas dúvidas"></i>
             </a>
 
             <!-- Editar icon fontawsome-->
-            <a href="#">
+            <a href="#" title="Editar seus dados">
                 <i class="fas fa-edit editar icon"></i>
             </a>
 
             <!-- Whatsapp icon fontawsome-->
-            <a class="whatsapp" href="#">
+            <a class="whatsapp" href="#" title="Enviar mensagem pelo whatsapp">
                 <i class="fab fa-whatsapp whatsapp icon"></i>
             </a>
-            <!-- https://api.whatsapp.com/send?phone=5521996302949&text=Testando api dos whatsapp -->
+
         </div>
     </div>
 </main>

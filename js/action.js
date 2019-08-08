@@ -57,3 +57,31 @@ $(document).ready(function () {
         $('.inputWhatsapp').hide();
     });
 });
+
+//Integração com api do whatsapp para telefone Bárbara
+function mensagemWhatsapp(mensagemWhatsapp) {
+
+    var celular = "5521996302949";
+
+    var texto = document.getElementById("textoWhatsapp").value;
+    texto = window.encodeURIComponent(texto);
+
+    window.open("https://api.whatsapp.com/send?phone=" + celular + "&text=" + texto, "_blank");
+    //Obs.. use "_system", no lugar de blank, caso você esteja usando Phonegap / Cordova / Ionic ou qualquer um baseado em webview;
+}
+
+//Mostrar formulário de edição
+$(document).ready(function () {
+    $('.editarCadastroFranqueados').hide();
+    $('.editar').click(function () {
+        $('.editarCadastroFranqueados').show();
+    });
+});
+
+//Fechar texto input whatsapp
+$(document).ready(function () {
+    $('.editarCadastroFranqueados').hide();
+    $('.fa-times').click(function () {
+        $('.editarCadastroFranqueados').hide();
+    });
+});

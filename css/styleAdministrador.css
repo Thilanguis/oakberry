@@ -1,3 +1,7 @@
+.container {
+    height: 500px;
+}
+
 h2 {
     text-align: center;
     margin: 30px 0;

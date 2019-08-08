@@ -8,8 +8,9 @@
 }
 
 #logo {
-    height: 85px;
+    height: 70px;
     width: 45px;
+    margin: 10px 0;
 }
 
 #menu a {
