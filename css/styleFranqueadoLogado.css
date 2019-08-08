@@ -2,6 +2,10 @@
     background-color: #161616;
 } */
 
+.container {
+    height: 500px;
+}
+
 main {
     max-width: 1080px;
     margin: 0 auto;
@@ -25,17 +29,25 @@ main {
 
 .carrinho {
     font-size: 30px;
-    margin-left: 16px;
+    color: white;
+    margin-right: 10px;
 }
 
 .question {
     font-size: 30px;
-    margin-left: 20px;
+    color: white;
+    margin-right: 3px;
 }
 
 .editar {
     font-size: 30px;
-    margin-left: 25px;
+    color: white;
+    margin-left: 3px;
+}
+
+.whatsapp {
+    font-size: 35px;
+    color: white;
 }
 
 .menu--closed {
@@ -104,4 +116,18 @@ main {
 .tools--visible {
     margin-top: 40%;
     z-index: 100;
+}
+
+h2 {
+    text-align: center;
+}
+
+#inputWhatsapp {
+    float: left;
+    margin: 230px 0 0 40px;
+}
+
+.fa-times {
+    color: darkred;
+    font-size: 20px;
 }

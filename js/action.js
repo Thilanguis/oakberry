@@ -41,3 +41,19 @@ $(document).ready(function () {
 
 
 });
+
+//Mostrar texto input whatsapp
+$(document).ready(function () {
+    $('.inputWhatsapp').hide();
+    $('.whatsapp').click(function () {
+        $('.inputWhatsapp').show();
+    });
+});
+
+//Fechar texto input whatsapp
+$(document).ready(function () {
+    $('.inputWhatsapp').hide();
+    $('.fa-times').click(function () {
+        $('.inputWhatsapp').hide();
+    });
+});

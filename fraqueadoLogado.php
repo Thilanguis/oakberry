@@ -21,37 +21,19 @@
     include_once 'header.php';
     ?>
 
-    <main>
+    <div class="container">
 
-        <div class="menu menu--closed">
+        <?php 
+        include_once 'menuLateralFranqueados.php';
+        ?>
 
-            <div class="button">
-                <span> </span>
-                <span> </span>
-                <span> </span>
-            </div>
+        <h2>Bem-vindo</h2>
 
-            <div class="tools tools--hidden">
-                <!-- Carrinho icon fontawsome-->
-                <a href="#">
-                    <i class="fas fa-shopping-cart carrinho"></i>
-                </a>
-
-                <!-- Dúvidas icon fontawsome-->
-                <a href="#">
-                    <i class="fas fa-question question"></i>
-                </a>
-
-                <!-- Editar icon fontawsome-->
-                <a href="#">
-                    <i class="fas fa-edit editar"></i>
-                </a>
-
-            </div>
-
+        <div id="inputWhatsapp" class="form-group inputWhatsapp">
+            <label class="inputWhatsapp" for="exampleFormControlTextarea1">Envíenos sua dúvida</label> <i class="fas fa-times"></i>
+            <textarea class="form-control inputWhatsapp" id="exampleFormControlTextarea1" rows="3"></textarea>
         </div>
-
-    </main>
+    </div>
 
     <?php
     include_once 'footer.php';

@@ -30,8 +30,7 @@ footer {
     font-size: 40px;
 }
 
-a,
-i {
+.rodape {
     text-decoration: none;
     color: white;
     margin-right: 12px;
