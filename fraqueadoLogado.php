@@ -21,7 +21,37 @@
     include_once 'header.php';
     ?>
 
+    <main>
 
+        <div class="menu menu--closed">
+
+            <div class="button">
+                <span> </span>
+                <span> </span>
+                <span> </span>
+            </div>
+
+            <div class="tools tools--hidden">
+                <!-- Carrinho icon fontawsome-->
+                <a href="#">
+                    <i class="fas fa-shopping-cart carrinho"></i>
+                </a>
+
+                <!-- Dúvidas icon fontawsome-->
+                <a href="#">
+                    <i class="fas fa-question question"></i>
+                </a>
+
+                <!-- Editar icon fontawsome-->
+                <a href="#">
+                    <i class="fas fa-edit editar"></i>
+                </a>
+
+            </div>
+
+        </div>
+
+    </main>
 
     <?php
     include_once 'footer.php';
