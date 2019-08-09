@@ -47,15 +47,16 @@
     
     $endereco = "insert into endereco (enderecoMatriz, complemento, bairro, numero, cidade, estado, cep) values ('".$enderecoDaSede."','".$complemento."','".$bairro."','".$numeroDeEndereco."','".$cidade."','".$estado."','".$cep."')";
         
-        $verificandoEmailExistente = "select emailPrimeiroFranqueado from contatofranqueado";
+        $campoVazio = $franqueado != "" && $email != "" && $telefone != "" && $outroFranqueado != "" && $outroEmail != "" && $outroTelefone != "" && $inauguracao != "" && $razaoSocial != "" && $cnpj != "" && $inscricaoEstadual != "" && $tipoDeLoja != "" && $emailDaLoja != "" && $shopping != "" && $administradora != "" && $enderecoDaSede != "" && $complemento != "" && $bairro != "" && $numeroDeEndereco != "" && $cidade != "" && $estado != "" && $cep != "" && $telefoneDaLoja != "" && $contaBancaria != "";
         
-        $resultado = mysqli_query($con, $verificandoEmailExistente);
+        //$verificandoEmailExistente = "select emailPrimeiroFranqueado from contatofranqueado";
         
-        $row = mysqli_fetch_array($resultado);
+        //$resultado = mysqli_query($con, $verificandoEmailExistente);
         
-        $comparandoEMail = $row["emailPrimeiroFranqueado"] != $email;
+        //$row = mysqli_fetch_array($resultado);
         
-        if($comparandoEMail){
+        //$comparandoEMail = $row["emailPrimeiroFranqueado"] != $email;
+        if($campoVazio){
             if(mysqli_query($con, $franqueados)){
                 if(mysqli_query($con, $contatoFranqueado)){
                     if(mysqli_query($con, $endereco)){
@@ -67,14 +68,14 @@
                         }
                     }
                 else{
+                    }
+                }
+            else{
                 }
             }
-            else{
-            }
-        }
-        else{
-            echo "Email já cadastrado";
-        }
+           else{
+               echo "preencher todos os campos!";
+           }
         
         mysqli_close($con);
         ?>
