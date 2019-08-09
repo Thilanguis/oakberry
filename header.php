@@ -1,6 +1,6 @@
 <header id="menu">
     <a id="home" href="index.php">Home</a>
-    <a href="cadastroFranquiados.php">Cadastro</a>
+    <a href="formCadastroFranquiados.php">Cadastro</a>
     <img id="logo" src="img/oak-retina.png" alt="">
 
     <a class="btn-none" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">

@@ -3,6 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
+    <link rel="icon" href="img/favicon-oak.png" type="image/x-icon" />
     <title>OakBerry Açaí!</title>
     <!--font da google-->
     <link href="https://fonts.googleapis.com/css?family=Ubuntu&display=swap" rel="stylesheet">
