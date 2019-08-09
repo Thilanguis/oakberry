@@ -84,45 +84,45 @@
                 </div>
                 <div class="form-group col-md-6">
                     <label for="inputAddress">E-mail da loja</label>
-                    <input type="email" class="form-control" id="inputPassword4" placeholder="">
+                    <input type="email" class="form-control" id="emailDaLoja" placeholder="" name="emailDaLoja">
                 </div>
             </div>
             <div class="form-row">
                 <div class="form-group col-md-6">
                     <label for="inputAddress">Shopping</label>
-                    <input type="text" class="form-control" id="inputEmail4" placeholder="">
+                    <input type="text" class="form-control" id="shopping" placeholder="" name="shopping">
                 </div>
                 <div class="form-group col-md-6">
                     <label for="inputAddress">Administradora</label>
-                    <input type="text" class="form-control" id="inputPassword4" placeholder="">
+                    <input type="text" class="form-control" id="administradora" placeholder="" name="administradora">
                 </div>
             </div>
             <div class="form-group">
                 <label for="inputAddress">Endereço da sede / Matriz</label>
-                <input type="text" class="form-control" id="inputAddress" placeholder="">
+                <input type="text" class="form-control" id="enderecoDaSede" placeholder="" name="enderecoDaSede">
             </div>
             <div class="form-row">
                 <div class="form-group col-md-5">
                     <label for="inputCity">Complemento</label>
-                    <input type="text" class="form-control" id="inputCity">
+                    <input type="text" class="form-control" id="complemento" name="complemento">
                 </div>
                 <div class="form-group col-md-4">
                     <label for="inputState">Bairro</label>
-                    <input type="text" class="form-control" id="inputZip">
+                    <input type="text" class="form-control" id="bairro" name="bairro">
                 </div>
                 <div class="form-group col-md-3">
                     <label for="inputZip">Número</label>
-                    <input type="number" class="form-control" id="inputZip">
+                    <input type="number" class="form-control" id="numeroDeEndereco" name="numeroDeEndereco">
                 </div>
             </div>
             <div class="form-row">
                 <div class="form-group col-md-5">
                     <label for="inputCity">Cidade</label>
-                    <input type="text" class="form-control" id="inputCity">
+                    <input type="text" class="form-control" id="cidade" name="cidade">
                 </div>
                 <div class="form-group col-md-4">
                     <label for="inputState">Estado</label>
-                    <select id="inputState" class="form-control">
+                    <select id="estado" class="form-control" name="estado">
                         <option value="" selected>Selecione o Estado</option>
                         <option value="Acre">Acre</option>
                         <option value="Alagoas">Alagoas</option>
@@ -155,17 +155,17 @@
                 </div>
                 <div class="form-group col-md-3">
                     <label for="inputZip">CEP</label>
-                    <input type="number" class="form-control" id="inputZip">
+                    <input type="number" class="form-control" id="cep" name="cep">
                 </div>
             </div>
             <div class="form-row">
                 <div class="form-group col-md-6">
                     <label for="inputAddress">Telefone da loja</label>
-                    <input type="number" class="form-control" id="inputEmail4" placeholder="">
+                    <input type="number" class="form-control" id="telefoneDaLoja" placeholder="" name="telefoneDaLoja">
                 </div>
                 <div class="form-group col-md-6">
                     <label for="inputAddress">Conta bancária</label>
-                    <input type="number" class="form-control" id="inputPassword4" placeholder="">
+                    <input type="number" class="form-control" id="contaBancaria" placeholder="" name="contaBancaria">
                 </div>
             </div>
             <div id="btnCadastrarFraquiados">
