@@ -78,7 +78,7 @@ $(document).ready(function () {
     });
 });
 
-//Fechar texto input whatsapp
+//Fechar formulário de edição
 $(document).ready(function () {
     $('.editarCadastroFranqueados').hide();
     $('.fa-times').click(function () {

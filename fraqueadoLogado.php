@@ -23,11 +23,11 @@
 
     <div class="container">
 
+        <h2>Bem-vindo, </h2>
+
         <?php 
         include_once 'menuLateralFranqueados.php';
         ?>
-
-        <h2>Bem-vindo</h2>
 
         <?php include_once 'editarFranqueados.php'; ?>
 

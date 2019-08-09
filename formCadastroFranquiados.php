@@ -3,6 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
+    <link rel="icon" href="img/favicon-oak.png" type="image/x-icon" />
     <title>OakBerry Açaí!</title>
     <!--font da google-->
     <link href="https://fonts.googleapis.com/css?family=Ubuntu&display=swap" rel="stylesheet">
@@ -23,59 +24,59 @@
 
     <div class="container" id="cadastro">
         <h4>Cadastro de franqueados</h4>
-        <form>
+        <form method="post" action="cadastrarFranqueados.php">
             <div class="form-row">
                 <div class="form-group col-md-5">
                     <label for="inputCity">Franqueado</label>
-                    <input type="text" class="form-control" id="franqueado">
+                    <input type="text" class="form-control" id="franqueado" name="franqueado">
                 </div>
                 <div class="form-group col-md-4">
                     <label for="inputState">E-mail</label>
-                    <input type="email" class="form-control" id="email">
+                    <input type="email" class="form-control" id="email" name="email">
                 </div>
                 <div class="form-group col-md-3">
                     <label for="inputZip">Telefone</label> <img id="adicionar" class="adicionar" src="img/icons8-adicionar-48.png" alt=""> <img id="remover" class="remover" src="img/icons8-menos-64.png" alt="">
-                    <input type="number" class="form-control" id="telefone">
+                    <input type="number" class="form-control" id="telefone" name="telefone">
                 </div>
             </div>
             <div class="form-row">
                 <div class="form-group col-md-5">
                     <label class="franqueado">Outro franqueado</label>
-                    <input class="franqueado form-control" id="">
+                    <input class="franqueado form-control" id="outroFranqueado" name="outroFranqueado">
                 </div>
                 <div class="form-group col-md-4">
                     <label class="franqueado" for="">E-mail</label>
-                    <input class="franqueado form-control" id="">
+                    <input class="franqueado form-control" id="outroEmail" name="outroEmail">
                 </div>
                 <div class="form-group col-md-3">
                     <label class="franqueado" for="">Telefone</label>
-                    <input class="franqueado form-control" id="">
+                    <input class="franqueado form-control" id="outroTelefone" name="outroTelefone">
                 </div>
             </div>
             <div class="form-row">
                 <div class="form-group col-md-6">
                     <label for="inputAddress">Inauguração</label>
-                    <input type="date" class="form-control" id="inputEmail4" placeholder="">
+                    <input type="date" class="form-control" id="inauguracao" placeholder="" name="inauguracao">
                 </div>
                 <div class="form-group col-md-6">
                     <label for="inputAddress">Razão social</label>
-                    <input type="password" class="form-control" id="inputPassword4" placeholder="">
+                    <input type="number" class="form-control" id="razaoSocial" placeholder="" name="razaoSocial">
                 </div>
             </div>
             <div class="form-row">
                 <div class="form-group col-md-6">
                     <label for="inputAddress">CNPJ</label>
-                    <input type="number" class="form-control" id="inputEmail4" placeholder="">
+                    <input type="number" class="form-control" id="cnpj" placeholder="" name="cnpj">
                 </div>
                 <div class="form-group col-md-6">
                     <label for="inputAddress">Inscrição estadual</label>
-                    <input type="number" class="form-control" id="inputPassword4" placeholder="">
+                    <input type="number" class="form-control" id="inscricaoEstadual" placeholder="" name="inscricaoEstadual">
                 </div>
             </div>
             <div class="form-row">
                 <div class="form-group col-md-6">
                     <label for="inputAddress">Tipo de loja</label>
-                    <select name="" id="" class="form-control">
+                    <select name="tipoDeLoja" id="tipoDeLoja" class="form-control">
                         <option value="" selected>...</option>
                         <option value="Shopping">Shopping</option>
                         <option value="Loja de rua">Loja de rua</option>
