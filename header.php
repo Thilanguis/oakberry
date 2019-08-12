@@ -8,7 +8,7 @@
     </a>
 
     <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-        <form class="px-4 py-3">
+        <form method="post" action="fraqueadoLogado.php" class="px-4 py-3">
             <h5>Login franqueados</h5>
             <hr>
             <div class="form-group">
@@ -25,5 +25,5 @@
         </form>
         <div class="dropdown-divider"></div>
     </div>
-    <a href="">Administrador</a>
+    <a href="administrador.php">Administrador</a>
 </header>

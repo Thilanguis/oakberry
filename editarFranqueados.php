@@ -1,4 +1,4 @@
-<div class="editarCadastroFranqueados">
+<div class="editarCadastroFranqueados animated fadeInLeft">
 
     <i id="xEditar" class="fas fa-times"></i>
     <h4>Editar seus contatos
