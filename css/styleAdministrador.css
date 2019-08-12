@@ -1,5 +1,5 @@
 .container {
-    height: 500px;
+    height: 700px;
 }
 
 h2 {
@@ -8,5 +8,11 @@ h2 {
 }
 
 table {
-    font-size: 10px;
+    width: auto;
+}
+
+.table-overflow {
+    margin-top: 25px;
+    max-height: 400px;
+    overflow-y: auto;
 }
