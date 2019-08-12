@@ -26,7 +26,6 @@
 
         <h2>Relação de franqueados</h2>
 
-
         <form action="administrador.php" method="get">
             <div class="row">
                 <div class="col-md-3">
@@ -44,77 +43,103 @@
             </div>
         </form>
 
+        <a href="#" class="a">Nome</a>
+        <a href="#" class="b">Email</a>
+        <a href="#" class="c">Telefone</a>
+        <a href="#" class="d">Inauguração</a>
+        <a href="#" class="e">Razão social</a>
+        <a href="#" class="f">CNPJ</a>
+        <a href="#" class="g">Inscrição estadual</a>
+        <a href="#" class="h">Tipo de loja</a>
+        <a href="#" class="i">Email da loja</a>
+        <a href="#" class="j">Shopping</a>
+        <a href="#" class="k">Administradora</a>
+        <a href="#" class="l">Endereço da sede</a>
+        <a href="#" class="m">Complemento</a>
+        <a href="#" class="n">Bairro</a>
+        <a href="#" class="o">Número</a>
+        <a href="#" class="p">Cidade</a>
+        <a href="#" class="q">Estado</a>
+        <a href="#" class="r">CEP</a>
+        <a href="#" class="s">Telefone da loja</a>
+        <a href="#" class="t">Conta bancária</a>
+
         <?php
             
             if(isset($_GET["nome"]))
             {
-                $nome = $_GET["nome"]; 
-                
                 include_once 'conexaoComBanco.php';
                 
-                $sql = "select nomePrimeiroFranqueado from contatofraqueado where nomePrimeiroFranqueado like '".$nome."%' asc";
+                $nome = $_GET["nome"]; 
+                
+                $sql = "select * from contatofranqueado inner join franqueados inner join endereco where nomePrimeiroFranqueado like '".$nome."%' ";
                 
                 $result = mysqli_query($con, $sql);
                 
                 $totalRegistros = mysqli_num_rows($result);
                 
+                echo $totalRegistros;
+                
                 if($totalRegistros > 0)
                 { ?>
         <div class="table-overflow">
-            <table id="tabelaConsultaPaciente" class="table table-dark table-striped container animated zoomIn">
+            <table id="" class="table table-dark table-hover animated zoomIn">
                 <tr>
-                    <th><i class="fas fa-address-card" style="color: #E8850C"></i></th>
-                    <th style="color: #E8850C">Nome</th>
-                    <th style="color: #E8850C">Telefone&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
-                    <th style="color: #E8850C">Endereço</th>
-                    <th style="color: #E8850C">Data de cadastramento</th>
-                    <th style="color: #E8850C">Editar Paciente</th>
-                    <th style="color: #E8850C">Excluir Paciente</th>
+                    <th class="1" style="color: #E8850C">Franqueado</th>
+                    <th class="2" style="color: #E8850C">Email</th>
+                    <th class="3" style="color: #E8850C">Telefone</th>
+                    <th class="4" style="color: #E8850C">Inauguração</th>
+                    <th class="5" style="color: #E8850C">Razão Social</th>
+                    <th class="6" style="color: #E8850C">CNPJ</th>
+                    <th class="7" style="color: #E8850C">Inscrição Estadual</th>
+                    <th class="8" style="color: #E8850C">Tipo de loja</th>
+                    <th class="9" style="color: #E8850C">Email da loja</th>
+                    <th class="10" style="color: #E8850C">Shopping</th>
+                    <th class="11" style="color: #E8850C">Administradora</th>
+                    <th class="12" style="color: #E8850C">Endereço da Sede</th>
+                    <th class="13" style="color: #E8850C">Complemento</th>
+                    <th class="14" style="color: #E8850C">Bairro</th>
+                    <th class="15" style="color: #E8850C">Número</th>
+                    <th class="16" style="color: #E8850C">Cidade</th>
+                    <th class="17" style="color: #E8850C">Estado</th>
+                    <th class="18" style="color: #E8850C">CEP</th>
+                    <th class="19" style="color: #E8850C">Telefone da loja</th>
+                    <th class="20" style="color: #E8850C">Conta bancária</th>
                 </tr>
 
 
 
                 <?php
                     
-                echo "<p style='margin: 0px; padding: 0px;'><b>Legenda:&nbsp;</b> <i class='fas fa-book' style='color: #E8850C'></i> Paciente sem Dieta";
-                echo "<p style='margin: 0px; padding: 0px;'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class='fas fa-book-open' style='color: #E8850C'></i> Paciente com Dieta</b>";
-                    
                     while($row = mysqli_fetch_array($result))
                     { 
                         echo "<tr>";
-                        
-                        $sql2 = "select ID_CLIENTE from alimentos where id_cliente =".$row["id_cliente"];
-                    
-                $result2 = mysqli_query($con, $sql2);
-                
-                $totalRegistros2 = mysqli_num_rows($result2);
-                        if ($totalRegistros2 > 0 ){
-                            echo "<td><i class='fas fa-book-open' title='Paciente já tem consulta' style='color: #E8850C'></i></td>";
-                        }
-                        else {
-                        echo "<td><a href='#' onclick='iniciarDieta(".$row["id_cliente"].")'> <i class='fas fa-book' title='Iniciar consulta' style='color: #E8850C'></i></td>";
-                        }
-                        
-                
-                $sql1 = "select ID_CLIENTE from alimentos where id_cliente =".$row["id_cliente"];
-                    
-                $result1 = mysqli_query($con, $sql1);
-                
-                $totalRegistros1 = mysqli_num_rows($result1);
-                        
-                        if ($totalRegistros1 > 0) {echo "<td id='consultandoDietaPacienteJaFeita'><a id='consultandoDietaPacienteJaFeita' href='#' onclick='consultarDieta(".$row["id_cliente"].")'><i id='consultandoDietaPacienteJaFeita'>".$row["nome"]."</i></td>";}
-                        else{
-                        echo "<td>".$row[1]."</td>";}
-                        echo "<td>".$row["telefone"]."</td>";
-                        echo "<td>".$row["endereco"]."</td>";
-                        echo "<td>".date('d-m-Y H:i:s', strtotime($row["registro"]))."</td>";
-                        echo "<td><a href='form-editarPacienteNovo.php?id_paciente=".$row["id_cliente"]."'><img src='img/icons8-editar-vários-128.png' alt='' style='padding-left: 15px; padding-top: 12px; width; 45px; height: 45px;'></td>";
-                        echo "<td><a href='#' onclick='excluir(".$row["id_cliente"].")'><img src='img/icons8-lixo-30.png' style='padding-left: 17px; padding-top: 12px;' alt=''></td>";
+                        echo "<td class='1'>".$row[1]."</td>";
+                        echo "<td class='2'>".$row[2]."</td>";
+                        echo "<td class='3'>".$row[3]."</td>";
+                        echo "<td class='4'>".date('d-m-Y', strtotime($row[9]))."</td>";
+                        echo "<td class='5'>".$row[10]."</td>";
+                        echo "<td class='6'>".$row[11]."</td>";
+                        echo "<td class='7'>".$row[12]."</td>";
+                        echo "<td class='8'>".$row[13]."</td>";
+                        echo "<td class='9'>".$row[14]."</td>";
+                        echo "<td class='10'>".$row[15]."</td>";
+                        echo "<td class='11'>".$row[16]."</td>";
+                        echo "<td class='12'>".$row[20]."</td>";
+                        echo "<td class='13'>".$row[21]."</td>";
+                        echo "<td class='14'>".$row[22]."</td>";
+                        echo "<td class='15'>".$row[23]."</td>";
+                        echo "<td class='16'>".$row[24]."</td>";
+                        echo "<td class='17'>".$row[25]."</td>";
+                        echo "<td class='18'>".$row[26]."</td>";
+                        echo "<td class='19'>".$row[17]."</td>";
+                        echo "<td class='20'>".$row[18]."</td>";
                         echo "</tr>";
                     } ?>
+
             </table>
         </div>
-        <?php } 
+        <?php }  
                 else
                 {
                     ?>

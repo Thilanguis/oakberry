@@ -85,3 +85,125 @@ $(document).ready(function () {
         $('.editarCadastroFranqueados').hide();
     });
 });
+
+//Tabela de pesquisa de franqueados administrador
+$(document).ready(function () {
+    $('.1').show();
+    $('.a').click(function () {
+        $('.1').toggle();
+    });
+});
+$(document).ready(function () {
+    $('.2').show();
+    $('.b').click(function () {
+        $('.2').toggle();
+    });
+});
+$(document).ready(function () {
+    $('.3').show();
+    $('.c').click(function () {
+        $('.3').toggle();
+    });
+});
+$(document).ready(function () {
+    $('.4').show();
+    $('.d').click(function () {
+        $('.4').toggle();
+    });
+});
+$(document).ready(function () {
+    $('.5').show();
+    $('.e').click(function () {
+        $('.5').toggle();
+    });
+});
+$(document).ready(function () {
+    $('.6').show();
+    $('.f').click(function () {
+        $('.6').toggle();
+    });
+});
+$(document).ready(function () {
+    $('.7').show();
+    $('.g').click(function () {
+        $('.7').toggle();
+    });
+});
+$(document).ready(function () {
+    $('.8').show();
+    $('.h').click(function () {
+        $('.8').toggle();
+    });
+});
+$(document).ready(function () {
+    $('.9').show();
+    $('.i').click(function () {
+        $('.9').toggle();
+    });
+});
+$(document).ready(function () {
+    $('.10').show();
+    $('.j').click(function () {
+        $('.10').toggle();
+    });
+});
+$(document).ready(function () {
+    $('.11').show();
+    $('.k').click(function () {
+        $('.11').toggle();
+    });
+});
+$(document).ready(function () {
+    $('.12').show();
+    $('.l').click(function () {
+        $('.12').toggle();
+    });
+});
+$(document).ready(function () {
+    $('.13').show();
+    $('.m').click(function () {
+        $('.13').toggle();
+    });
+});
+$(document).ready(function () {
+    $('.14').show();
+    $('.n').click(function () {
+        $('.14').toggle();
+    });
+});
+$(document).ready(function () {
+    $('.15').show();
+    $('.o').click(function () {
+        $('.15').toggle();
+    });
+});
+$(document).ready(function () {
+    $('.16').show();
+    $('.p').click(function () {
+        $('.16').toggle();
+    });
+});
+$(document).ready(function () {
+    $('.17').show();
+    $('.q').click(function () {
+        $('.17').toggle();
+    });
+});
+$(document).ready(function () {
+    $('.18').show();
+    $('.r').click(function () {
+        $('.18').toggle();
+    });
+});
+$(document).ready(function () {
+    $('.19').show();
+    $('.s').click(function () {
+        $('.19').toggle();
+    });
+});
+$(document).ready(function () {
+    $('.20').show();
+    $('.t').click(function () {
+        $('.20').toggle();
+    });
+});

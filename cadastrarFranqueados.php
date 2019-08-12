@@ -41,11 +41,11 @@
     $telefoneDaLoja           = $_POST["telefoneDaLoja"];
     $contaBancaria            = $_POST["contaBancaria"];
     
-    $franqueados = "insert into franqueados (id, usuario, inauguracao, razaoSocial, cnpj, inscricaoEstadual, tipoDeLoja, shopping, administradora, telefoneLoja, contaBancaria) values(null, '".$usuario."','".$inauguracao."','".$razaoSocial."','".$cnpj."','".$inscricaoEstadual."','".$tipoDeLoja."','".$shopping."','".$administradora."','".$telefoneDaLoja."','".$contaBancaria."')";
+    $franqueados = "insert into franqueados (id, usuario, inauguracao, razaoSocial, cnpj, inscricaoEstadual, tipoDeLoja, emailDaLoja, shopping, administradora, telefoneLoja, contaBancaria) values(null, '".$usuario."','".$inauguracao."','".$razaoSocial."','".$cnpj."','".$inscricaoEstadual."','".$tipoDeLoja."', '".$emailDaLoja."', '".$shopping."','".$administradora."','".$telefoneDaLoja."','".$contaBancaria."')";
         
-    $contatoFranqueado = "insert into contatofranqueado (nomePrimeiroFranqueado, emailPrimeiroFranqueado, telefonePrimeiroFranqueado, nomeSegundoFranqueado, emailSegundoFranqueado, telefoneSegundoFranqueado) values('".$franqueado."','".$email."','".$telefone."','".$outroFranqueado."','".$outroEmail."','".$outroTelefone."')";
+    $contatoFranqueado = "insert into contatofranqueado (id, nomePrimeiroFranqueado, emailPrimeiroFranqueado, telefonePrimeiroFranqueado, nomeSegundoFranqueado, emailSegundoFranqueado, telefoneSegundoFranqueado) values(null, '".$franqueado."','".$email."','".$telefone."','".$outroFranqueado."','".$outroEmail."','".$outroTelefone."')";
     
-    $endereco = "insert into endereco (enderecoMatriz, complemento, bairro, numero, cidade, estado, cep) values ('".$enderecoDaSede."','".$complemento."','".$bairro."','".$numeroDeEndereco."','".$cidade."','".$estado."','".$cep."')";
+    $endereco = "insert into endereco (id, enderecoMatriz, complemento, bairro, numero, cidade, estado, cep) values (null, '".$enderecoDaSede."','".$complemento."','".$bairro."','".$numeroDeEndereco."','".$cidade."','".$estado."','".$cep."')";
         
         $campoVazio = $franqueado != "" && $email != "" && $telefone != "" && $inauguracao != "" && $razaoSocial != "" && $cnpj != "" && $inscricaoEstadual != "" && $tipoDeLoja != "" && $emailDaLoja != "" && $enderecoDaSede != "" && $complemento != "" && $bairro != "" && $numeroDeEndereco != "" && $cidade != "" && $estado != "" && $cep != "" && $telefoneDaLoja != "" && $contaBancaria != "";
         
@@ -67,10 +67,10 @@
                        echo mysqli_error($con);
                         }
                     }
-                else{
+                else{ echo 1; echo mysqli_error($con);
                     }
                 }
-            else{
+            else{ echo 2; echo mysqli_error($con);
                 }
             }
            else{
