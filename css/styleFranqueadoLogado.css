@@ -27,6 +27,11 @@ main {
     overflow: hidden;
 }
 
+#logout {
+    float: right;
+    display: inline-block;
+}
+
 .carrinho {
     font-size: 30px;
     color: white;

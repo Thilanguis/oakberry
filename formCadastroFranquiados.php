@@ -55,6 +55,16 @@
             </div>
             <div class="form-row">
                 <div class="form-group col-md-6">
+                    <label for="inputAddress">Senha</label>
+                    <input type="password" class="form-control" id="inauguracao" placeholder="" name="senha">
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="inputAddress">Confirmar senha</label>
+                    <input type="password" class="form-control" id="razaoSocial" placeholder="" name="confirmarSenha">
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-6">
                     <label for="inputAddress">Inauguração</label>
                     <input type="date" class="form-control" id="inauguracao" placeholder="" name="inauguracao">
                 </div>

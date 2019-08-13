@@ -207,3 +207,13 @@ $(document).ready(function () {
         $('.20').toggle();
     });
 });
+
+//Deslogar do sistema
+function deslogarDoSistema() {
+
+    var nome = document.getElementById("bemVindo").value;
+
+    if (confirm("Deseja deslogar " + nome + "?")) {
+        location.href = 'deslogar.php';
+    }
+}

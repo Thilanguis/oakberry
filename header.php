@@ -8,16 +8,16 @@
     </a>
 
     <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-        <form method="post" action="fraqueadoLogado.php" class="px-4 py-3">
+        <form method="post" action="Session.php" class="px-4 py-3">
             <h5>Login franqueados</h5>
             <hr>
             <div class="form-group">
                 <label for="exampleDropdownFormEmail1">E-mail</label>
-                <input type="email" class="form-control" id="exampleDropdownFormEmail1" placeholder="email@example.com">
+                <input type="email" class="form-control" id="exampleDropdownFormEmail1" placeholder="email@example.com" name="login">
             </div>
             <div class="form-group">
                 <label for="exampleDropdownFormPassword1">Senha</label>
-                <input type="password" class="form-control" id="exampleDropdownFormPassword1" placeholder="********">
+                <input type="password" class="form-control" id="exampleDropdownFormPassword1" placeholder="********" name="senha">
             </div>
             <div id="loginFranqueados">
                 <button type="submit" class="btn btn-outline-dark">Entrar</button>

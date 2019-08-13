@@ -40,14 +40,16 @@
     $cep                      = $_POST["cep"];
     $telefoneDaLoja           = $_POST["telefoneDaLoja"];
     $contaBancaria            = $_POST["contaBancaria"];
+    $senha                    = $_POST["senha"];
+    $confirmarSenha           = $_POST["confirmarSenha"];
     
     $franqueados = "insert into franqueados (id, usuario, inauguracao, razaoSocial, cnpj, inscricaoEstadual, tipoDeLoja, emailDaLoja, shopping, administradora, telefoneLoja, contaBancaria) values(null, '".$usuario."','".$inauguracao."','".$razaoSocial."','".$cnpj."','".$inscricaoEstadual."','".$tipoDeLoja."', '".$emailDaLoja."', '".$shopping."','".$administradora."','".$telefoneDaLoja."','".$contaBancaria."')";
         
-    $contatoFranqueado = "insert into contatofranqueado (id, nomePrimeiroFranqueado, emailPrimeiroFranqueado, telefonePrimeiroFranqueado, nomeSegundoFranqueado, emailSegundoFranqueado, telefoneSegundoFranqueado) values(null, '".$franqueado."','".$email."','".$telefone."','".$outroFranqueado."','".$outroEmail."','".$outroTelefone."')";
+    $contatoFranqueado = "insert into contatofranqueado (id, nomePrimeiroFranqueado, emailPrimeiroFranqueado, telefonePrimeiroFranqueado, nomeSegundoFranqueado, emailSegundoFranqueado, telefoneSegundoFranqueado, senha, confirmarSenha) values(null, '".$franqueado."','".$email."','".$telefone."','".$outroFranqueado."','".$outroEmail."','".$outroTelefone."','".$senha."','".$confirmarSenha."')";
     
     $endereco = "insert into endereco (id, enderecoMatriz, complemento, bairro, numero, cidade, estado, cep) values (null, '".$enderecoDaSede."','".$complemento."','".$bairro."','".$numeroDeEndereco."','".$cidade."','".$estado."','".$cep."')";
         
-        $campoVazio = $franqueado != "" && $email != "" && $telefone != "" && $inauguracao != "" && $razaoSocial != "" && $cnpj != "" && $inscricaoEstadual != "" && $tipoDeLoja != "" && $emailDaLoja != "" && $enderecoDaSede != "" && $complemento != "" && $bairro != "" && $numeroDeEndereco != "" && $cidade != "" && $estado != "" && $cep != "" && $telefoneDaLoja != "" && $contaBancaria != "";
+        $campoVazio = $franqueado != "" && $email != "" && $telefone != "" && $inauguracao != "" && $razaoSocial != "" && $cnpj != "" && $inscricaoEstadual != "" && $tipoDeLoja != "" && $emailDaLoja != "" && $enderecoDaSede != "" && $complemento != "" && $bairro != "" && $numeroDeEndereco != "" && $cidade != "" && $estado != "" && $cep != "" && $telefoneDaLoja != "" && $contaBancaria != "" && $senha != "" && $confirmarSenha != "";
         
         //$verificandoEmailExistente = "select emailPrimeiroFranqueado from contatofranqueado";
         
@@ -56,6 +58,10 @@
         //$row = mysqli_fetch_array($resultado);
         
         //$comparandoEMail = $row["emailPrimeiroFranqueado"] != $email;
+        
+        $conferirSenhas = $senha == $confirmarSenha;
+          
+        if($conferirSenhas){
         if($campoVazio){
             if(mysqli_query($con, $franqueados)){
                 if(mysqli_query($con, $contatoFranqueado)){
@@ -70,13 +76,17 @@
                 else{ echo 1; echo mysqli_error($con);
                     }
                 }
-            else{ echo 2; echo mysqli_error($con);
+              else{ echo 2; echo mysqli_error($con);
                 }
             }
-           else{
+            else{
                echo "preencher todos os campos!";
-           }
+               }
+            }
         
+          else{
+              echo "Senhas não conferem!";
+          }
         mysqli_close($con);
         ?>
 

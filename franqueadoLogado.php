@@ -10,6 +10,7 @@
 
     <?php
     include_once 'head.php';
+    include_once 'verificaLogin.php';
     ?>
 
     <link rel="stylesheet" href="css/styleFranqueadoLogado.css">
@@ -22,9 +23,13 @@
     include_once 'header.php';
     ?>
 
+    <div id="logout"><a href="#"><img onclick="deslogarDoSistema();" src="img/icons8-logout-arredondado-64.png" alt=""></a></div>
+
     <div class="container">
 
-        <h2>Bem-vindo, </h2>
+        <h2>Bem-vindo, <?php echo $_SESSION["nome"]; ?></h2>
+
+        <input id="bemVindo" type="hidden" value="<?php echo $_SESSION["nome"] ?>">
 
         <?php 
         include_once 'menuLateralFranqueados.php';
