@@ -5,7 +5,7 @@
     $login = $_POST["login"];
     $senha = $_POST["senha"];
     include_once 'conexaoComBanco.php';
-    $sql = "select * from contatofranqueado where emailPrimeiroFranqueado = '".$login."' and senha = '".$senha."' ";
+    $sql = "select * from contatofranqueado where emailPrimeiroFranqueado = '".$login."' and senha = '".$senha."' or emailSegundoFranqueado = '".$login."' and senha = '".$senha."' ";
     $result = mysqli_query($con, $sql) or die(mysqli_error($con));
     $totalRegistros = mysqli_num_rows($result);
     $row = mysqli_fetch_array($result);
@@ -14,6 +14,9 @@ if ($totalRegistros > 0)
     $_SESSION["login"]          = $row["emailPrimeiroFranqueado"];
     $_SESSION["senha"]          = $row["senha"];
     $_SESSION["nome"]           = $row["nomePrimeiroFranqueado"];
+    $_SESSION["segundoLogin"]   = $row["emailSegundoFranqueado"];
+    $_SESSION["segundoNome"]   = $row["nomeSegundoFranqueado"];
+    
     header("Location:franqueadoLogado.php");
  }
 else

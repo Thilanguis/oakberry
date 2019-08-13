@@ -11,3 +11,9 @@
     #carousel {
         height: auto;
     }
+
+    #logout {
+        float: right;
+        display: inline-block;
+        margin: 30px;
+    }

@@ -23,11 +23,17 @@
     include_once 'header.php';
     ?>
 
-    <div id="logout"><a href="#"><img onclick="deslogarDoSistema();" src="img/icons8-logout-arredondado-64.png" alt=""></a></div>
+    <div id="logout"><a href="#"><img title="Deslogar" onclick="deslogarDoSistema();" src="img/icons8-exportar-48.png" alt=""></a></div>
 
     <div class="container">
 
-        <h2>Bem-vindo, <?php echo $_SESSION["nome"]; ?></h2>
+        <h2>Bem-vindo,
+            <?php echo $_SESSION["nome"];
+            if($_SESSION["segundoNome"] == true){
+                echo " e ", $_SESSION["segundoNome"];
+            } 
+             ?>
+            !</h2>
 
         <input id="bemVindo" type="hidden" value="<?php echo $_SESSION["nome"] ?>">
 
