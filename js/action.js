@@ -42,6 +42,38 @@ $(document).ready(function () {
 
 });
 
+//Mostrar menu pedidos
+$(document).ready(function () {
+    $('.menuPedidos').hide();
+    $('.fa-shopping-cart').click(function () {
+        $('.menuPedidos').show();
+    });
+});
+
+//Fechar menu pedidos
+$(document).ready(function () {
+    $('.menuPedidos').hide();
+    $('.fa-times').click(function () {
+        $('.menuPedidos').hide();
+    });
+});
+
+//Mostrar formulário de edição
+$(document).ready(function () {
+    $('.editarCadastroFranqueados').hide();
+    $('.editar').click(function () {
+        $('.editarCadastroFranqueados').show();
+    });
+});
+
+//Fechar formulário de edição
+$(document).ready(function () {
+    $('.editarCadastroFranqueados').hide();
+    $('.fa-times').click(function () {
+        $('.editarCadastroFranqueados').hide();
+    });
+});
+
 //Mostrar texto input whatsapp
 $(document).ready(function () {
     $('.inputWhatsapp').hide();
@@ -69,22 +101,6 @@ function mensagemWhatsapp(mensagemWhatsapp) {
     window.open("https://api.whatsapp.com/send?phone=" + celular + "&text=" + texto, "_blank");
     //Obs.. use "_system", no lugar de blank, caso você esteja usando Phonegap / Cordova / Ionic ou qualquer um baseado em webview;
 }
-
-//Mostrar formulário de edição
-$(document).ready(function () {
-    $('.editarCadastroFranqueados').hide();
-    $('.editar').click(function () {
-        $('.editarCadastroFranqueados').show();
-    });
-});
-
-//Fechar formulário de edição
-$(document).ready(function () {
-    $('.editarCadastroFranqueados').hide();
-    $('.fa-times').click(function () {
-        $('.editarCadastroFranqueados').hide();
-    });
-});
 
 //Tabela de pesquisa de franqueados administrador
 $(document).ready(function () {

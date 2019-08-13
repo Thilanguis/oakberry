@@ -31,17 +31,13 @@
 
         <input id="bemVindo" type="hidden" value="<?php echo $_SESSION["nome"] ?>">
 
-        <?php 
-        include_once 'menuLateralFranqueados.php';
-        ?>
+        <?php include_once 'menuLateralFranqueados.php'; ?>
+
+        <?php include_once 'pedidosFranqueados.php' ?>
 
         <?php include_once 'editarFranqueados.php'; ?>
 
-        <div id="inputWhatsapp" class="form-group inputWhatsapp animated zoomIn">
-            <label class="inputWhatsapp" for=""><b>Envíenos sua dúvida</b></label> <i id="xWhatsapp" class="fas fa-times"></i>
-            <textarea class="form-control inputWhatsapp" id="textoWhatsapp" rows="3" name="textoWhatsapp">Olá Barbara Toste, </textarea>
-            <a href="#" onclick="mensagemWhatsapp();"><i class="fas fa-arrow-right"></i></a>
-        </div>
+        <?php include_once 'whatsappFranqueados.php'; ?>
     </div>
 
     <?php

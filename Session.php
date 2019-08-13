@@ -17,10 +17,10 @@ if ($totalRegistros > 0)
     header("Location:franqueadoLogado.php");
  }
 else
-{ header('refresh:2,index.php');
+{ header('refresh:2,index.php?msg="E-mail ou senha incorreto"&login='.$login.'&senha='.$senha.'');
     ?>
 <div class="alert alert-danger animated zoomIn container" role="alert" style="width: 300px; margin-top: 100px; text-align: center;">
-    E-mail ou senha digitados errado!
+    E-mail ou senha incorretos!
 </div>
 
 <!-- <div id="btnConfirmacao">

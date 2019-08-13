@@ -13,14 +13,26 @@
             <hr>
             <div class="form-group">
                 <label for="exampleDropdownFormEmail1">E-mail</label>
-                <input type="email" class="form-control" id="exampleDropdownFormEmail1" placeholder="email@example.com" name="login">
+                <input type="text" class="form-control" id="exampleDropdownFormEmail1" placeholder="" name="login" value="<?php
+                if(isset($_GET["login"]))
+                {
+                 echo $msg = $_GET["login"]; }  ?>">
             </div>
             <div class="form-group">
                 <label for="exampleDropdownFormPassword1">Senha</label>
-                <input type="password" class="form-control" id="exampleDropdownFormPassword1" placeholder="********" name="senha">
+                <input type="password" class="form-control" id="exampleDropdownFormPassword1" placeholder="" name="senha" value="<?php
+                if(isset($_GET["senha"]))
+                {
+                 echo $msg = $_GET["senha"]; }  ?>">
             </div>
             <div id="loginFranqueados">
                 <button type="submit" class="btn btn-outline-dark">Entrar</button>
+                <?php
+                if(isset($_GET["msg"]))
+                { ?>
+                <div class="alert alert-danger animated zoomIn container" role="alert" style="width: 300px; margin-top: 10px; text-align: center;">
+                    <?php echo $msg = $_GET["msg"]; ?>
+                </div> <?php } ?>
             </div>
         </form>
         <div class="dropdown-divider"></div>

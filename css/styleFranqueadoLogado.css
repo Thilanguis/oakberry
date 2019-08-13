@@ -30,6 +30,7 @@ main {
 #logout {
     float: right;
     display: inline-block;
+    margin: 10px;
 }
 
 .carrinho {
@@ -180,4 +181,95 @@ h4 {
     font-size: 20px;
     margin-left: 900px;
     margin-top: 20px;
+}
+
+
+#xPedidos {
+    color: darkred;
+    font-size: 20px;
+    margin-left: 700px;
+    margin-top: 20px;
+}
+
+/* Menu de pedidos */
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+nav {
+    position: absolute;
+    top: 48%;
+    left: 50%;
+    width: 100%;
+    text-align: center;
+    transform: translateX(-50%) translateY(-50%);
+    -webkit-transform: translateX(-50%) translateY(-50%);
+}
+
+nav:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+nav ul li {
+    list-style: none;
+    display: inline-block;
+    oveflow: hidden;
+}
+
+nav ul li a {
+    display: block;
+    padding: 10px 40px;
+    text-decoration: none;
+    font-size: 18px;
+    position: relative;
+    color: rgba(255, 255, 255, 0.8);
+    -webkit-transform: translateX(-15%);
+    transform: translateX(-15%);
+    border-radius: 50px;
+    width: 130%;
+    text-align: center;
+    transition-duration: 0.25s;
+}
+
+nav ul li a:hover {
+    color: white;
+}
+
+nav ul li.active a {
+    color: white;
+}
+
+nav ul li:nth-child(1) a {
+    background-color: rgb(162, 61, 191);
+}
+
+nav ul li:nth-child(2n) a {
+    background-color: rgb(139, 54, 163);
+}
+
+nav ul li:nth-child(3n) a {
+    background-color: rgb(111, 43, 131);
+}
+
+nav ul li:nth-child(4n) a {
+    background-color: rgb(97, 38, 114);
+}
+
+nav ul li:nth-child(5n) a {
+    background-color: rgb(86, 34, 101);
+}
+
+nav .dot {
+    background-color: red;
+    width: 6px;
+    height: 6px;
+    position: absolute;
+    bottom: -20px;
+    left: 0;
+    border-radius: 50%;
+    transition-duration: 0.5s;
 }
