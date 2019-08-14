@@ -16,9 +16,9 @@
     .fa-sign-out-alt {
         float: right;
         display: inline-block;
-        margin: 30px;
+        margin: 20px;
         font-size: 45px;
-        color: rgba(73, 29, 86, 1);
+        color: rgb(88, 34, 105);
     }
 
     .fa-sign-out-alt:hover {
