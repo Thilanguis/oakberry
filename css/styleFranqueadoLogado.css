@@ -6,6 +6,7 @@
     height: 600px;
 }
 
+/* Menu fraqueado lateral */
 main {
     max-width: 1080px;
     margin: 0 auto;
@@ -99,7 +100,6 @@ main {
     transition: 0.3s margin ease-in-out;
 }
 
-
 .tools .icon {
     transition: 0.2s transform ease-in-out;
 }
@@ -118,6 +118,7 @@ main {
     z-index: 100;
 }
 
+/* Boas vindas franqueado logado */
 h2 {
     text-align: center;
     margin: 20px 0;
@@ -239,8 +240,9 @@ nav ul li a {
     transform: translateX(-15%);
     border-radius: 50px;
     width: 130%;
-    text-align: center;
+    text-align: left;
     transition-duration: 0.25s;
+    display: inline-block;
 }
 
 nav ul li a:hover {
@@ -280,4 +282,10 @@ nav .dot {
     left: 0;
     border-radius: 50%;
     transition-duration: 0.5s;
+}
+
+.menuPedidos {
+    margin: 0;
+    padding: 0;
+    display: inline-block;
 }

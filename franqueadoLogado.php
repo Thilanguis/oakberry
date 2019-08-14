@@ -23,7 +23,7 @@
     include_once 'header.php';
     ?>
 
-    <div id="logout"><a href="#"><img title="Deslogar" onclick="deslogarDoSistema();" src="img/icons8-exportar-48.png" alt=""></a></div>
+    <div id="logout"><a href="#"><i onclick="deslogarDoSistema()" class="fas fa-sign-out-alt"></i></a></div>
 
     <div class="container">
 

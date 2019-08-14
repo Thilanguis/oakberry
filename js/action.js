@@ -46,7 +46,7 @@ $(document).ready(function () {
 $(document).ready(function () {
     $('.menuPedidos').hide();
     $('.fa-shopping-cart').click(function () {
-        $('.menuPedidos').show();
+        $('.menuPedidos').toggle();
     });
 });
 
@@ -62,7 +62,7 @@ $(document).ready(function () {
 $(document).ready(function () {
     $('.editarCadastroFranqueados').hide();
     $('.editar').click(function () {
-        $('.editarCadastroFranqueados').show();
+        $('.editarCadastroFranqueados').toggle();
     });
 });
 
@@ -78,7 +78,7 @@ $(document).ready(function () {
 $(document).ready(function () {
     $('.inputWhatsapp').hide();
     $('.whatsapp').click(function () {
-        $('.inputWhatsapp').show();
+        $('.inputWhatsapp').toggle();
     });
 });
 

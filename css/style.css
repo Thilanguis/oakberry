@@ -12,8 +12,15 @@
         height: auto;
     }
 
-    #logout {
+    #logout,
+    .fa-sign-out-alt {
         float: right;
         display: inline-block;
         margin: 30px;
+        font-size: 45px;
+        color: rgba(73, 29, 86, 1);
+    }
+
+    .fa-sign-out-alt:hover {
+        color: rgb(131, 43, 157);
     }
