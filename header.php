@@ -28,10 +28,10 @@
             <div id="loginFranqueados">
                 <button type="submit" class="btn btn-outline-dark">Entrar</button>
                 <?php
-                if(isset($_GET["msg"]))
+                if(isset($_GET["msgLogin"]))
                 { ?>
-                <div class="alert alert-danger animated zoomIn container" role="alert" style="width: 300px; margin-top: 10px; text-align: center;">
-                    <?php echo $msg = $_GET["msg"]; ?>
+                <div class="alert alert-danger animated zoomIn container" role="alert" style="width: 200px; text-align: center; padding: 0; margin-bottom: 0; margin-top: 10px;">
+                    <?php echo $msg = $_GET["msgLogin"]; ?>
                 </div> <?php } ?>
             </div>
         </form>

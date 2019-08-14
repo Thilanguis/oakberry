@@ -80,12 +80,12 @@
                 }
             }
             else{
-               echo "preencher todos os campos!";
+                header('location:formCadastroFranquiados.php?msg="Preencher todos os campos!"&franqueado='.$franqueado.'&email='.$email.'&telefone='.$telefone.'&outroFranqueado='.$outroFranqueado.'&outroEmail='.$outroEmail.'&outroTelefone='.$outroTelefone.'&inauguracao='.$inauguracao.'&razaoSocial='.$razaoSocial.'&cnpj='.$cnpj.'&inscricaoEstadual='.$inscricaoEstadual.'&tipoDeLoja='.$tipoDeLoja.'&emailDaLoja='.$emailDaLoja.'&shopping='.$shopping.'&administradora='.$administradora.'&enderecoDaSede='.$enderecoDaSede.'&complemento='.$complemento.'&bairro='.$bairro.'&numeroDeEndereco='.$numeroDeEndereco.'&cidade='.$cidade.'&estado='.$estado.'&cep='.$cep.'&telefoneDaLoja='.$telefoneDaLoja.'&contaBancaria='.$contaBancaria.'');
                }
             }
         
           else{
-              header('location:formCadastroFranquiados.php?msg="Senhas não conferem!"&franqueado='.$franqueado.'&email='.$email.'&telefone='.$telefone.'&outroFranqueado='.$outroFranqueado.'&outroEmail='.$outroEmail.'&outroTelefone='.$outroTelefone.'&inauguracao='.$inauguracao.'&razaoSocial='.$razaoSocial.'&cnpj='.$cnpj.'&inscricaoEstadual='.$inscricaoEstadual.'&tipoDeLoja='.$tipoDeLoja.'&emailDaLoja='.$emailDaLoja.'&shopping='.$shopping.'&administradora='.$administradora.'&enderecoDaSede='.$enderecoDaSede.'&complemento='.$complemento.'&bairro='.$bairro.'&numeroDeEndereco='.$numeroDeEndereco.'&cidade='.$cidade.'&estado='.$estado.'&cep='.$cep.'&telefoneDaLoja='.$telefoneDaLoja.'&contaBancaria='.$contaBancaria.'&senha='.$senha.'&confirmarSenha='.$confirmarSenha.'');
+              header('location:formCadastroFranquiados.php?msg="Senhas não conferem!"&franqueado='.$franqueado.'&email='.$email.'&telefone='.$telefone.'&outroFranqueado='.$outroFranqueado.'&outroEmail='.$outroEmail.'&outroTelefone='.$outroTelefone.'&inauguracao='.$inauguracao.'&razaoSocial='.$razaoSocial.'&cnpj='.$cnpj.'&inscricaoEstadual='.$inscricaoEstadual.'&tipoDeLoja='.$tipoDeLoja.'&emailDaLoja='.$emailDaLoja.'&shopping='.$shopping.'&administradora='.$administradora.'&enderecoDaSede='.$enderecoDaSede.'&complemento='.$complemento.'&bairro='.$bairro.'&numeroDeEndereco='.$numeroDeEndereco.'&cidade='.$cidade.'&estado='.$estado.'&cep='.$cep.'&telefoneDaLoja='.$telefoneDaLoja.'&contaBancaria='.$contaBancaria.'');
               echo "Senhas não conferem!";
           }
         mysqli_close($con);

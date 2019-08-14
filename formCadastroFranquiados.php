@@ -27,7 +27,7 @@
         <?php
        if(isset($_GET["msg"]))
                 { ?>
-        <div class="alert alert-danger animated zoomIn container" role="alert" style="width: 300px; margin-top: 10px; text-align: center;">
+        <div class="alert alert-danger animated zoomIn container" role="alert" style="width: 300px; margin-top: 10px; text-align: center; padding: 0;">
             <?php echo $msg = $_GET["msg"]; ?>
         </div> <?php } ?>
 
