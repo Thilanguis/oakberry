@@ -25,6 +25,12 @@
     <div class="container" id="cadastro">
 
         <?php
+        if(isset($_GET["cadastrado"]))
+                { ?>
+        <div class="alert alert-success animated zoomIn container" role="alert" style="width: 300px; margin-top: 10px; text-align: center; padding: 0;">
+            <?php echo $msg = $_GET["cadastrado"]; ?>
+        </div> <?php }
+        
        if(isset($_GET["msg"]))
                 { ?>
         <div class="alert alert-danger animated zoomIn container" role="alert" style="width: 300px; margin-top: 10px; text-align: center; padding: 0;">

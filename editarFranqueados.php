@@ -19,6 +19,7 @@
                 <input type="number" class="form-control" id="telefone">
             </div>
         </div>
+
         <div class="form-row">
             <div class="form-group col-md-5">
                 <label class="franqueado">Outro franqueado</label>
@@ -33,6 +34,7 @@
                 <input class="franqueado form-control" id="">
             </div>
         </div>
+
         <div class="form-row">
             <div class="form-group col-md-6">
                 <label for="inputAddress">Inauguração</label>
@@ -43,6 +45,7 @@
                 <input type="password" class="form-control" id="inputPassword4" placeholder="">
             </div>
         </div>
+
         <div class="form-row">
             <div class="form-group col-md-6">
                 <label for="inputAddress">CNPJ</label>
@@ -53,6 +56,7 @@
                 <input type="number" class="form-control" id="inputPassword4" placeholder="">
             </div>
         </div>
+
         <div class="form-row">
             <div class="form-group col-md-6">
                 <label for="inputAddress">Tipo de loja</label>
@@ -67,6 +71,7 @@
                 <input type="email" class="form-control" id="inputPassword4" placeholder="">
             </div>
         </div>
+
         <div class="form-row">
             <div class="form-group col-md-6">
                 <label for="inputAddress">Shopping</label>
@@ -77,10 +82,12 @@
                 <input type="text" class="form-control" id="inputPassword4" placeholder="">
             </div>
         </div>
+
         <div class="form-group">
             <label for="inputAddress">Endereço da sede / Matriz</label>
             <input type="text" class="form-control" id="inputAddress" placeholder="">
         </div>
+
         <div class="form-row">
             <div class="form-group col-md-5">
                 <label for="inputCity">Complemento</label>
@@ -95,6 +102,7 @@
                 <input type="number" class="form-control" id="inputZip">
             </div>
         </div>
+
         <div class="form-row">
             <div class="form-group col-md-5">
                 <label for="inputCity">Cidade</label>
@@ -138,6 +146,7 @@
                 <input type="number" class="form-control" id="inputZip">
             </div>
         </div>
+
         <div class="form-row">
             <div class="form-group col-md-6">
                 <label for="inputAddress">Telefone da loja</label>
@@ -148,6 +157,7 @@
                 <input type="number" class="form-control" id="inputPassword4" placeholder="">
             </div>
         </div>
+
         <div id="btnCadastrarFraquiados">
             <button type="submit" class="btn btn-outline-dark">Atualizar</button>
         </div>

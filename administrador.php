@@ -72,7 +72,7 @@
                 
                 $nome = $_GET["nome"]; 
                 
-                $sql = "select * from contatofranqueado inner join franqueados inner join endereco where nomePrimeiroFranqueado like '".$nome."%' ";
+                $sql = "select * from franqueados where nomePrimeiroFranqueado like '".$nome."%' ";
                 
                 $result = mysqli_query($con, $sql);
                 
@@ -113,26 +113,26 @@
                     while($row = mysqli_fetch_array($result))
                     { 
                         echo "<tr>";
-                        echo "<th class='1' style='text-align: center;'>".$row[1]."</th>";
-                        echo "<td class='2' style='text-align: center;'>".$row[2]."</td>";
-                        echo "<td class='3' style='text-align: center;'>".$row[3]."</td>";
-                        echo "<td class='4' style='text-align: center;'>".date('d-m-Y', strtotime($row[9]))."</td>";
-                        echo "<td class='5' style='text-align: center;'>".$row[10]."</td>";
-                        echo "<td class='6' style='text-align: center;'>".$row[11]."</td>";
-                        echo "<td class='7' style='text-align: center;'>".$row[12]."</td>";
-                        echo "<td class='8' style='text-align: center;'>".$row[13]."</td>";
-                        echo "<td class='9' style='text-align: center;'>".$row[14]."</td>";
-                        echo "<td class='10' style='text-align: center;'>".$row[15]."</td>";
-                        echo "<td class='11' style='text-align: center;'>".$row[16]."</td>";
-                        echo "<td class='12' style='text-align: center;'>".$row[20]."</td>";
-                        echo "<td class='13' style='text-align: center;'>".$row[21]."</td>";
-                        echo "<td class='14' style='text-align: center;'>".$row[22]."</td>";
-                        echo "<td class='15' style='text-align: center;'>".$row[23]."</td>";
-                        echo "<td class='16' style='text-align: center;'>".$row[24]."</td>";
-                        echo "<td class='17' style='text-align: center;'>".$row[25]."</td>";
-                        echo "<td class='18' style='text-align: center;'>".$row[26]."</td>";
-                        echo "<td class='19' style='text-align: center;'>".$row[17]."</td>";
-                        echo "<td class='20' style='text-align: center;'>".$row[18]."</td>";
+                        echo "<th class='1' style='text-align: center;'>".$row["nomePrimeiroFranqueado"]."</th>";
+                        echo "<td class='2' style='text-align: center;'>".$row["emailPrimeiroFranqueado"]."</td>";
+                        echo "<td class='3' style='text-align: center;'>".$row["telefonePrimeiroFranqueado"]."</td>";
+                        echo "<td class='4' style='text-align: center;'>".date('d-m-Y', strtotime($row["inauguracao"]))."</td>";
+                        echo "<td class='5' style='text-align: center;'>".$row["razaoSocial"]."</td>";
+                        echo "<td class='6' style='text-align: center;'>".$row["cnpj"]."</td>";
+                        echo "<td class='7' style='text-align: center;'>".$row["inscricaoEstadual"]."</td>";
+                        echo "<td class='8' style='text-align: center;'>".$row["tipoDeLoja"]."</td>";
+                        echo "<td class='9' style='text-align: center;'>".$row["emailDaLoja"]."</td>";
+                        echo "<td class='10' style='text-align: center;'>".$row["shopping"]."</td>";
+                        echo "<td class='11' style='text-align: center;'>".$row["administradora"]."</td>";
+                        echo "<td class='12' style='text-align: center;'>".$row["enderecoMatriz"]."</td>";
+                        echo "<td class='13' style='text-align: center;'>".$row["complemento"]."</td>";
+                        echo "<td class='14' style='text-align: center;'>".$row["bairro"]."</td>";
+                        echo "<td class='15' style='text-align: center;'>".$row["numero"]."</td>";
+                        echo "<td class='16' style='text-align: center;'>".$row["cidade"]."</td>";
+                        echo "<td class='17' style='text-align: center;'>".$row["estado"]."</td>";
+                        echo "<td class='18' style='text-align: center;'>".$row["cep"]."</td>";
+                        echo "<td class='19' style='text-align: center;'>".$row["telefoneLoja"]."</td>";
+                        echo "<td class='20' style='text-align: center;'>".$row["contaBancaria"]."</td>";
                         echo "</tr>";
                     } ?>
 
