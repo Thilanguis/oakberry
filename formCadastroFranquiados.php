@@ -43,21 +43,21 @@
         <form method="post" action="cadastrarFranqueados.php">
             <div class="form-row">
                 <div class="form-group col-md-5">
-                    <label for="inputCity">Franqueado</label>
+                    <label for="inputCity">Franqueado<div id="asteristico">*</div></label>
                     <input type="text" class="form-control" id="franqueado" name="franqueado" value="<?php
                 if(isset($_GET["franqueado"]))
                 {
                  echo $msg = $_GET["franqueado"]; }  ?>">
                 </div>
                 <div class="form-group col-md-4">
-                    <label for="inputState">E-mail</label>
+                    <label for="inputState">E-mail<div id="asteristico">*</div></label>
                     <input type="email" class="form-control" id="email" name="email" value="<?php
                 if(isset($_GET["email"]))
                 {
                  echo $msg = $_GET["email"]; }  ?>">
                 </div>
                 <div class="form-group col-md-3">
-                    <label for="inputZip">Telefone</label> <img id="adicionar" class="adicionar" src="img/icons8-adicionar-48.png" alt=""> <img id="remover" class="remover" src="img/icons8-menos-64.png" alt="">
+                    <label for="inputZip">Telefone<div id="asteristico">*</div></label> <img id="adicionar" class="adicionar" src="img/icons8-adicionar-48.png" alt=""> <img id="remover" class="remover" src="img/icons8-menos-64.png" alt="">
                     <input type="number" class="form-control" id="telefone" name="telefone" value="<?php
                 if(isset($_GET["telefone"]))
                 {
@@ -89,14 +89,14 @@
             </div>
             <div class="form-row">
                 <div class="form-group col-md-6">
-                    <label for="inputAddress">Senha</label>
+                    <label for="inputAddress">Senha<div id="asteristico">*</div></label>
                     <input type="password" class="form-control" id="inauguracao" placeholder="" name="senha" value="<?php
                 if(isset($_GET["senha"]))
                 {
                  echo $msg = $_GET["senha"]; }  ?>">
                 </div>
                 <div class="form-group col-md-6">
-                    <label for="inputAddress">Confirmar senha</label>
+                    <label for="inputAddress">Confirmar senha<div id="asteristico">*</div></label>
                     <input type="password" class="form-control" id="razaoSocial" placeholder="" name="confirmarSenha" value="<?php
                 if(isset($_GET["confirmarSenha"]))
                 {
@@ -105,14 +105,14 @@
             </div>
             <div class="form-row">
                 <div class="form-group col-md-6">
-                    <label for="inputAddress">Inauguração</label>
+                    <label for="inputAddress">Inauguração<div id="asteristico">*</div></label>
                     <input type="date" class="form-control" id="inauguracao" placeholder="" name="inauguracao" value="<?php
                 if(isset($_GET["inauguracao"]))
                 {
                  echo $msg = $_GET["inauguracao"]; }  ?>">
                 </div>
                 <div class="form-group col-md-6">
-                    <label for="inputAddress">Razão social</label>
+                    <label for="inputAddress">Razão social<div id="asteristico">*</div></label>
                     <input type="number" class="form-control" id="razaoSocial" placeholder="" name="razaoSocial" value="<?php
                 if(isset($_GET["razaoSocial"]))
                 {
@@ -121,14 +121,14 @@
             </div>
             <div class="form-row">
                 <div class="form-group col-md-6">
-                    <label for="inputAddress">CNPJ</label>
+                    <label for="inputAddress">CNPJ<div id="asteristico">*</div></label>
                     <input type="number" class="form-control" id="cnpj" placeholder="" name="cnpj" value="<?php
                 if(isset($_GET["cnpj"]))
                 {
                  echo $msg = $_GET["cnpj"]; }  ?>">
                 </div>
                 <div class="form-group col-md-6">
-                    <label for="inputAddress">Inscrição estadual</label>
+                    <label for="inputAddress">Inscrição estadual<div id="asteristico">*</div></label>
                     <input type="number" class="form-control" id="inscricaoEstadual" placeholder="" name="inscricaoEstadual" value="<?php
                 if(isset($_GET["inscricaoEstadual"]))
                 {
@@ -137,7 +137,7 @@
             </div>
             <div class="form-row">
                 <div class="form-group col-md-6">
-                    <label for="inputAddress">Tipo de loja</label>
+                    <label for="inputAddress">Tipo de loja<div id="asteristico">*</div></label>
                     <select name="tipoDeLoja" id="tipoDeLoja" class="form-control">
                         <option value="<?php
                 if(isset($_GET["tipoDeLoja"]))
@@ -172,7 +172,7 @@
                 </div>
             </div>
             <div class="form-group">
-                <label for="inputAddress">Endereço da sede / Matriz</label>
+                <label for="inputAddress">Endereço da sede / Matriz<div id="asteristico">*</div></label>
                 <input type="text" class="form-control" id="enderecoDaSede" placeholder="" name="enderecoDaSede" value="<?php
                 if(isset($_GET["enderecoDaSede"]))
                 {
@@ -180,21 +180,21 @@
             </div>
             <div class="form-row">
                 <div class="form-group col-md-5">
-                    <label for="inputCity">Complemento</label>
+                    <label for="inputCity">Complemento<div id="asteristico">*</div></label>
                     <input type="text" class="form-control" id="complemento" name="complemento" value="<?php
                 if(isset($_GET["complemento"]))
                 {
                  echo $msg = $_GET["complemento"]; }  ?>">
                 </div>
                 <div class="form-group col-md-4">
-                    <label for="inputState">Bairro</label>
+                    <label for="inputState">Bairro<div id="asteristico">*</div></label>
                     <input type="text" class="form-control" id="bairro" name="bairro" value="<?php
                 if(isset($_GET["bairro"]))
                 {
                  echo $msg = $_GET["bairro"]; }  ?>">
                 </div>
                 <div class="form-group col-md-3">
-                    <label for="inputZip">Número</label>
+                    <label for="inputZip">Número<div id="asteristico">*</div></label>
                     <input type="number" class="form-control" id="numeroDeEndereco" name="numeroDeEndereco" value="<?php
                 if(isset($_GET["numeroDeEndereco"]))
                 {
@@ -203,14 +203,14 @@
             </div>
             <div class="form-row">
                 <div class="form-group col-md-5">
-                    <label for="inputCity">Cidade</label>
+                    <label for="inputCity">Cidade<div id="asteristico">*</div></label>
                     <input type="text" class="form-control" id="cidade" name="cidade" value="<?php
                 if(isset($_GET["cidade"]))
                 {
                  echo $msg = $_GET["cidade"]; }  ?>">
                 </div>
                 <div class="form-group col-md-4">
-                    <label for="inputState">Estado</label>
+                    <label for="inputState">Estado<div id="asteristico">*</div></label>
                     <select id="estado" class="form-control" name="estado">
                         <option value="" selected>Selecione o Estado</option>
                         <option value="Acre">Acre</option>
@@ -243,7 +243,7 @@
                     </select>
                 </div>
                 <div class="form-group col-md-3">
-                    <label for="inputZip">CEP</label>
+                    <label for="inputZip">CEP<div id="asteristico">*</div></label>
                     <input type="number" class="form-control" id="cep" name="cep" value="<?php
                 if(isset($_GET["cep"]))
                 {
@@ -252,20 +252,25 @@
             </div>
             <div class="form-row">
                 <div class="form-group col-md-6">
-                    <label for="inputAddress">Telefone da loja</label>
+                    <label for="inputAddress">Telefone da loja<div id="asteristico">*</div></label>
                     <input type="number" class="form-control" id="telefoneDaLoja" placeholder="" name="telefoneDaLoja" value="<?php
                 if(isset($_GET["telefoneDaLoja"]))
                 {
                  echo $msg = $_GET["telefoneDaLoja"]; }  ?>">
                 </div>
                 <div class="form-group col-md-6">
-                    <label for="inputAddress">Conta bancária</label>
+                    <label for="inputAddress">Conta bancária<div id="asteristico">*</div></label>
                     <input type="number" class="form-control" id="contaBancaria" placeholder="" name="contaBancaria" value="<?php
                 if(isset($_GET["contaBancaria"]))
                 {
                  echo $msg = $_GET["contaBancaria"]; }  ?>">
                 </div>
             </div>
+
+            <div id="campos">
+                <p>* Campos obrigatórios</p>
+            </div>
+
             <div id="btnCadastrarFraquiados">
                 <button type="submit" class="btn btn-outline-dark">Cadastrar</button>
             </div>
