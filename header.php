@@ -3,9 +3,19 @@
     <a href="formCadastroFranquiados.php">Cadastro</a>
     <img id="logo" src="img/oak-retina.png" alt="">
 
+    <?php if(isset($_SESSION["login"])){
+     if($_SESSION["login"] == true) {?>
+    <a href="franqueadoLogado.php">
+        Menu
+    </a>
+    <?php }
+}
+
+    else { ?>
     <a class="btn-none" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
         Login
     </a>
+    <?php } ?>
 
     <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
         <form method="post" action="Session.php" class="px-4 py-3">

@@ -10,6 +10,7 @@
 
     <?php
     include_once 'head.php';
+    session_start();
     ?>
 
     <link rel="stylesheet" href="css/styleCadastro.css">
