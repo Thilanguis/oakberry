@@ -24,18 +24,20 @@
 
     <div class="container" id="cadastro">
 
-        <?php
+        <div id="sumirDiv">
+            <?php
         if(isset($_GET["cadastrado"]))
                 { ?>
-        <div class="alert alert-success animated zoomIn container" role="alert" style="width: 300px; margin-top: 10px; text-align: center; padding: 0;">
-            <?php echo $msg = $_GET["cadastrado"]; ?>
-        </div> <?php }
+            <div class="alert alert-success animated zoomIn container" role="alert" style="width: 300px; margin-top: 10px; text-align: center; padding: 0;">
+                <?php echo $msg = $_GET["cadastrado"]; ?>
+            </div> <?php }
         
        if(isset($_GET["msg"]))
                 { ?>
-        <div class="alert alert-danger animated zoomIn container" role="alert" style="width: 300px; margin-top: 10px; text-align: center; padding: 0;">
-            <?php echo $msg = $_GET["msg"]; ?>
-        </div> <?php } ?>
+            <div class="alert alert-danger animated zoomIn container" role="alert" style="width: 300px; margin-top: 10px; text-align: center; padding: 0;">
+                <?php echo $msg = $_GET["msg"]; ?>
+            </div> <?php } ?>
+        </div>
 
         <h4>Cadastro de franqueados</h4>
         <form method="post" action="cadastrarFranqueados.php">

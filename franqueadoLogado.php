@@ -37,6 +37,21 @@
 
         <input id="bemVindo" type="hidden" value="<?php echo $_SESSION["nome"] ?>">
 
+        <div id="sumirDiv">
+            <?php
+        if(isset($_GET["cadastrado"]))
+                { ?>
+            <div class="alert alert-success animated zoomIn container" role="alert" style="width: 300px; margin-top: 0; text-align: center; padding: 0; height: auto;">
+                <?php echo $msg = $_GET["cadastrado"]; ?>
+            </div> <?php }
+        
+       if(isset($_GET["msg"]))
+                { ?>
+            <div class="alert alert-danger animated zoomIn container" role="alert" style="width: 300px; margin-top: 0px; text-align: center; padding: 0; height: auto;">
+                <?php echo $msg = $_GET["msg"]; ?>
+            </div> <?php } ?>
+        </div>
+
         <?php include_once 'menuLateralFranqueados.php'; ?>
 
         <?php include_once 'pedidosFranqueados.php' ?>

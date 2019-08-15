@@ -233,3 +233,8 @@ function deslogarDoSistema() {
         location.href = 'deslogar.php';
     }
 }
+
+//Sumir div mensagem atualização
+setTimeout(function () {
+    $('#sumirDiv').hide('fast');
+}, 5000);

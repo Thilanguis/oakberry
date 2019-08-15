@@ -1,13 +1,10 @@
 <div class="editarCadastroFranqueados animated zoomIn">
 
     <i id="xEditar" class="fas fa-times"></i>
-    <h4>Editar seus contatos
 
+    <h4>Editar seus contatos </h4>
 
-
-        <input type="hidden" value="<?php echo $_SESSION["idFranqueado"]; ?> ">
-
-        <?php
+    <?php
            
     include_once 'conexaoComBanco.php';
     
@@ -19,64 +16,78 @@
     
     ?>
 
-    </h4>
-    <form>
+
+    <form action="atualizarFranqueados.php" method="post">
+
+        <input type="hidden" value="<?php echo $_SESSION["idFranqueado"]; ?>" name="id">
+
         <div class="form-row">
             <div class="form-group col-md-5">
                 <label for="inputCity">Franqueado</label>
-                <input type="text" class="form-control" id="franqueado" value="<?php echo $row["nomePrimeiroFranqueado"] ?>">
+                <input type="text" class="form-control" id="franqueado" value="<?php echo $row["nomePrimeiroFranqueado"] ?>" name="franqueado">
             </div>
             <div class="form-group col-md-4">
                 <label for="inputState">E-mail</label>
-                <input type="email" class="form-control" id="email" value="<?php echo $row["emailPrimeiroFranqueado"] ?>">
+                <input type="email" class="form-control" id="email" value="<?php echo $row["emailPrimeiroFranqueado"] ?>" name="email">
             </div>
             <div class="form-group col-md-3">
                 <label for="inputZip">Telefone</label> <img id="adicionar" class="adicionar" src="img/icons8-adicionar-48.png" alt=""> <img id="remover" class="remover" src="img/icons8-menos-64.png" alt="">
-                <input type="number" class="form-control" id="telefone" value="<?php echo $row["telefonePrimeiroFranqueado"] ?>">
+                <input type="number" class="form-control" id="telefone" value="<?php echo $row["telefonePrimeiroFranqueado"] ?>" name="telefone">
             </div>
         </div>
 
         <div class="form-row">
             <div class="form-group col-md-5">
                 <label class="franqueado">Outro franqueado</label>
-                <input class="franqueado form-control" id="" value="<?php echo $row["nomeSegundoFranqueado"] ?>">
+                <input class="franqueado form-control" id="" value="<?php echo $row["nomeSegundoFranqueado"] ?>" name="outroFranqueado">
             </div>
             <div class="form-group col-md-4">
                 <label class="franqueado" for="">E-mail</label>
-                <input class="franqueado form-control" id="" value="<?php echo $row["emailSegundoFranqueado"] ?>">
+                <input class="franqueado form-control" id="" value="<?php echo $row["emailSegundoFranqueado"] ?>" name="outroEmail">
             </div>
             <div class="form-group col-md-3">
                 <label class="franqueado" for="">Telefone</label>
-                <input class="franqueado form-control" id="" value="<?php echo $row["telefoneSegundoFranqueado"] ?>">
+                <input class="franqueado form-control" id="" value="<?php echo $row["telefoneSegundoFranqueado"] ?>" name="outroTelefone">
+            </div>
+        </div>
+
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                <label for="inputAddress">Senha</label>
+                <input type="password" class="form-control" id="inauguracao" placeholder="" name="senha" value="<?php echo $row["senha"] ?>">
+            </div>
+            <div class="form-group col-md-6">
+                <label for="inputAddress">Confirmar senha</label>
+                <input type="password" class="form-control" id="razaoSocial" placeholder="" name="confirmarSenha" value="<?php echo $row["confirmarSenha"]  ?>">
             </div>
         </div>
 
         <div class="form-row">
             <div class="form-group col-md-6">
                 <label for="inputAddress">Inauguração</label>
-                <input type="date" class="form-control" id="inputEmail4" placeholder="" value="<?php echo $row["inauguracao"] ?>">
+                <input type="date" class="form-control" id="inputEmail4" placeholder="" value="<?php echo $row["inauguracao"] ?>" name="inauguracao">
             </div>
             <div class="form-group col-md-6">
                 <label for="inputAddress">Razão social</label>
-                <input type="number" class="form-control" id="inputPassword4" placeholder="" value="<?php echo $row["razaoSocial"] ?>">
+                <input type="number" class="form-control" id="inputPassword4" placeholder="" value="<?php echo $row["razaoSocial"] ?>" name="razaoSocial">
             </div>
         </div>
 
         <div class="form-row">
             <div class="form-group col-md-6">
                 <label for="inputAddress">CNPJ</label>
-                <input type="number" class="form-control" id="inputEmail4" placeholder="" value="<?php echo $row["cnpj"] ?>">
+                <input type="number" class="form-control" id="inputEmail4" placeholder="" value="<?php echo $row["cnpj"] ?>" name="cnpj">
             </div>
             <div class="form-group col-md-6">
                 <label for="inputAddress">Inscrição estadual</label>
-                <input type="number" class="form-control" id="number" placeholder="" value="<?php echo $row["inscricaoEstadual"] ?>">
+                <input type="number" class="form-control" id="number" placeholder="" value="<?php echo $row["inscricaoEstadual"] ?>" name="inscricaoEstadual">
             </div>
         </div>
 
         <div class="form-row">
             <div class="form-group col-md-6">
                 <label for="inputAddress">Tipo de loja</label>
-                <select name="" id="" class="form-control">
+                <select name="tipoDeLoja" id="" class="form-control">
                     <option value="<?php echo $row["tipoDeLoja"] ?>" selected><?php echo $row["tipoDeLoja"] ?></option>
                     <option value="Shopping">Shopping</option>
                     <option value="Loja de rua">Loja de rua</option>
@@ -84,49 +95,49 @@
             </div>
             <div class="form-group col-md-6">
                 <label for="inputAddress">E-mail da loja</label>
-                <input type="email" class="form-control" id="inputPassword4" placeholder="" value="<?php echo $row["emailDaLoja"] ?>">
+                <input type="email" class="form-control" id="inputPassword4" placeholder="" value="<?php echo $row["emailDaLoja"] ?>" name="emailDaLoja">
             </div>
         </div>
 
         <div class="form-row">
             <div class="form-group col-md-6">
                 <label for="inputAddress">Shopping</label>
-                <input type="text" class="form-control" id="inputEmail4" placeholder="" value="<?php echo $row["shopping"] ?>">
+                <input type="text" class="form-control" id="inputEmail4" placeholder="" value="<?php echo $row["shopping"] ?>" name="shopping">
             </div>
             <div class="form-group col-md-6">
                 <label for="inputAddress">Administradora</label>
-                <input type="text" class="form-control" id="inputPassword4" placeholder="" value="<?php echo $row["administradora"] ?>">
+                <input type="text" class="form-control" id="inputPassword4" placeholder="" value="<?php echo $row["administradora"] ?>" name="administradora">
             </div>
         </div>
 
         <div class="form-group">
             <label for="inputAddress">Endereço da sede / Matriz</label>
-            <input type="text" class="form-control" id="inputAddress" placeholder="" value="<?php echo $row["enderecoMatriz"] ?>">
+            <input type="text" class="form-control" id="inputAddress" placeholder="" value="<?php echo $row["enderecoMatriz"] ?>" name="enderecoDaSede">
         </div>
 
         <div class="form-row">
             <div class="form-group col-md-5">
                 <label for="inputCity">Complemento</label>
-                <input type="text" class="form-control" id="inputCity" value="<?php echo $row["complemento"] ?>">
+                <input type="text" class="form-control" id="inputCity" value="<?php echo $row["complemento"] ?>" name="complemento">
             </div>
             <div class="form-group col-md-4">
                 <label for="inputState">Bairro</label>
-                <input type="text" class="form-control" id="inputZip" value="<?php echo $row["bairro"] ?>">
+                <input type="text" class="form-control" id="inputZip" value="<?php echo $row["bairro"] ?>" name="bairro">
             </div>
             <div class="form-group col-md-3">
                 <label for="inputZip">Número</label>
-                <input type="number" class="form-control" id="inputZip" value="<?php echo $row["numero"] ?>">
+                <input type="number" class="form-control" id="inputZip" value="<?php echo $row["numero"] ?>" name="numeroDeEndereco">
             </div>
         </div>
 
         <div class="form-row">
             <div class="form-group col-md-5">
                 <label for="inputCity">Cidade</label>
-                <input type="text" class="form-control" id="inputCity" value="<?php echo $row["cidade"] ?>">
+                <input type="text" class="form-control" id="inputCity" value="<?php echo $row["cidade"] ?>" name="cidade">
             </div>
             <div class="form-group col-md-4">
                 <label for="inputState">Estado</label>
-                <select id="inputState" class="form-control">
+                <select name="estado" id="inputState" class="form-control">
                     <option value="<?php echo $row["estado"] ?>" selected> <?php echo $row["estado"] ?></option>
                     <option value="Acre">Acre</option>
                     <option value="Alagoas">Alagoas</option>
@@ -159,18 +170,18 @@
             </div>
             <div class="form-group col-md-3">
                 <label for="inputZip">CEP</label>
-                <input type="number" class="form-control" id="cep" value="<?php echo $row["cep"] ?>">
+                <input type="number" class="form-control" id="cep" value="<?php echo $row["cep"] ?>" name="cep">
             </div>
         </div>
 
         <div class="form-row">
             <div class="form-group col-md-6">
                 <label for="inputAddress">Telefone da loja</label>
-                <input type="number" class="form-control" id="inputEmail4" placeholder="" value="<?php echo $row["telefoneLoja"] ?>">
+                <input type="number" class="form-control" id="inputEmail4" placeholder="" value="<?php echo $row["telefoneLoja"] ?>" name="telefoneDaLoja">
             </div>
             <div class="form-group col-md-6">
                 <label for="inputAddress">Conta bancária</label>
-                <input type="number" class="form-control" id="inputPassword4" placeholder="" value="<?php echo $row["contaBancaria"] ?>">
+                <input type="number" class="form-control" id="inputPassword4" placeholder="" value="<?php echo $row["contaBancaria"] ?>" name="contaBancaria">
             </div>
         </div>
 
