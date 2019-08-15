@@ -10,7 +10,7 @@
 
     <?php
     include_once 'head.php';
-    session_start();
+    include_once 'verificaADMIN.php';
     ?>
 
     <link rel="stylesheet" href="css/styleAdministrador.css">

@@ -1,6 +1,6 @@
 <?php
      session_start();
-if("user"!=$_SESSION["usuario"])
+if("admin"!=$_SESSION["usuario"])
 {
  header("Location:index.php");;
     exit();

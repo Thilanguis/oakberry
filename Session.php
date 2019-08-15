@@ -15,15 +15,28 @@
 if ($campoVazio){
         if ($totalRegistros > 0)
         {
+            if($row["usuario"] == "user"){
             $_SESSION["login"]          = $row["emailPrimeiroFranqueado"];
             $_SESSION["senha"]          = $row["senha"];
             $_SESSION["nome"]           = $row["nomePrimeiroFranqueado"];
             $_SESSION["segundoLogin"]   = $row["emailSegundoFranqueado"];
             $_SESSION["segundoNome"]    = $row["nomeSegundoFranqueado"];
             $_SESSION["idFranqueado"]   = $row["id"];
+            $_SESSION["usuario"]        = $row["usuario"];
 
             header("Location:franqueadoLogado.php");
          }
+            else{
+                $_SESSION["login"]          = $row["emailPrimeiroFranqueado"];
+            $_SESSION["senha"]          = $row["senha"];
+            $_SESSION["nome"]           = $row["nomePrimeiroFranqueado"];
+            $_SESSION["segundoLogin"]   = $row["emailSegundoFranqueado"];
+            $_SESSION["segundoNome"]    = $row["nomeSegundoFranqueado"];
+            $_SESSION["idFranqueado"]   = $row["id"];
+            $_SESSION["usuario"]        = $row["usuario"];
+                header("Location:administrador.php");
+            }
+        }
         else
         { header('refresh:2,index.php?msgLogin=Login incorreto&login='.$login.'&senha='.$senha.'');
             ?>
