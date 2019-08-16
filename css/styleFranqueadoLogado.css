@@ -3,7 +3,7 @@
 } */
 
 .container {
-    height: 600px;
+    height: 900px;
 }
 
 /* Menu fraqueado lateral */
@@ -178,7 +178,12 @@ h2 {
 
 h4 {
     text-align: center;
-    margin-bottom: 30px;
+    margin-bottom: 70px;
+}
+
+#h4duvidas {
+    text-align: center;
+    margin: 50px 0;
 }
 
 #btnCadastrarFraquiados {
@@ -288,4 +293,9 @@ nav .dot {
     margin: 0;
     padding: 0;
     display: inline-block;
+}
+
+#duvidas {
+    width: 720px;
+    margin-left: 23%;
 }

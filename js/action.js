@@ -58,6 +58,14 @@ $(document).ready(function () {
     });
 });
 
+//Mostrar menu dúvidas
+$(document).ready(function () {
+    $('.accordion').hide();
+    $('.fa-question').click(function () {
+        $('.accordion').toggle();
+    });
+});
+
 //Mostrar formulário de edição
 $(document).ready(function () {
     $('.editarCadastroFranqueados').hide();

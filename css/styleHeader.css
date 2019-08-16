@@ -18,8 +18,11 @@
     color: white;
     margin: 0 60px;
     font-size: 28px;
+    transition: all 0.5s;
+    cursor: pointer;
 }
 
 #menu a:hover {
-    color: rgba(198, 191, 191, 0.66);
+    color: rgb(208, 51, 255);
+    transform: scale(1.5);
 }

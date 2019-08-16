@@ -22,5 +22,9 @@
     }
 
     .fa-sign-out-alt:hover {
-        color: rgb(131, 43, 157);
+        color: rgb(208, 51, 255);
+    }
+
+    input {
+        box-shadow: none !important;
     }

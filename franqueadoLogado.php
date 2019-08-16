@@ -54,16 +54,16 @@
 
         <?php include_once 'menuLateralFranqueados.php'; ?>
 
-        <?php include_once 'pedidosFranqueados.php' ?>
+        <?php include_once 'pedidosFranqueados.php'; ?>
+
+        <?php include_once 'ajudaFranqueados.php'; ?>
 
         <?php include_once 'editarFranqueados.php'; ?>
 
         <?php include_once 'whatsappFranqueados.php'; ?>
     </div>
 
-    <?php
-    include_once 'footer.php';
-    ?>
+    <?php include_once 'footer.php'; ?>
 
 </body>
 
