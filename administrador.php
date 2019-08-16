@@ -23,7 +23,15 @@
     include_once 'header.php';
     ?>
 
+    <div id="logout"><a href="#"><i onclick="deslogarDoSistema()" class="fas fa-sign-out-alt"></i></a></div>
+
     <div class="container">
+
+        <input id="bemVindo" type="hidden" value="<?php echo $_SESSION["nome"] ?>">
+
+        <h2 id="h2administrador">Bem-vindo,
+            <?php echo $_SESSION["nome"]; ?>
+        </h2>
 
         <h2>Relação de franqueados</h2>
 
