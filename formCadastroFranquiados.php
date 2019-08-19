@@ -42,7 +42,9 @@
 
         <h4>Cadastro de franqueados</h4>
         <form method="post" action="cadastrarFranqueados.php">
+
             <div class="form-row">
+
                 <div class="form-group col-md-5">
                     <label for="inputCity">Franqueado<div id="asteristico">*</div></label>
                     <input type="text" class="form-control" id="franqueado" name="franqueado" value="<?php
@@ -50,6 +52,7 @@
                 {
                  echo $msg = $_GET["franqueado"]; }  ?>">
                 </div>
+
                 <div class="form-group col-md-4">
                     <label for="inputState">E-mail<div id="asteristico">*</div></label>
                     <input type="email" class="form-control" id="email" name="email" value="<?php
@@ -57,15 +60,19 @@
                 {
                  echo $msg = $_GET["email"]; }  ?>">
                 </div>
+
                 <div class="form-group col-md-3">
-                    <label for="inputZip">Telefone<div id="asteristico">*</div></label> <img id="adicionar" class="adicionar" src="img/icons8-adicionar-48.png" alt=""> <img id="remover" class="remover" src="img/icons8-menos-64.png" alt="">
-                    <input type="number" class="form-control" id="telefone" name="telefone" value="<?php
+                    <label for="inputZip">Celular<div id="asteristico">*</div></label> <img id="adicionar" class="adicionar" src="img/icons8-adicionar-48.png" alt=""> <img id="remover" class="remover" src="img/icons8-menos-64.png" alt="">
+                    <input type="tel" class="form-control" maxlength="11" pattern="([0-9]{11})" title="Digitar seu telefone celular com DDD sem usar caracteres especiais" requiredid="telefone" name="telefone" value="<?php
                 if(isset($_GET["telefone"]))
                 {
                  echo $msg = $_GET["telefone"]; }  ?>">
                 </div>
+
             </div>
+
             <div class="form-row">
+
                 <div class="form-group col-md-5">
                     <label class="franqueado">Outro franqueado</label>
                     <input class="franqueado form-control" id="outroFranqueado" name="outroFranqueado" value="<?php
@@ -73,6 +80,7 @@
                 {
                  echo $msg = $_GET["outroFranqueado"]; }  ?>">
                 </div>
+
                 <div class="form-group col-md-4">
                     <label class="franqueado" for="">E-mail</label>
                     <input class="franqueado form-control" id="outroEmail" name="outroEmail" value="<?php
@@ -80,15 +88,19 @@
                 {
                  echo $msg = $_GET["outroEmail"]; }  ?>">
                 </div>
+
                 <div class="form-group col-md-3">
-                    <label class="franqueado" for="">Telefone</label>
+                    <label class="franqueado" for="">Celular</label>
                     <input class="franqueado form-control" id="outroTelefone" name="outroTelefone" value="<?php
                 if(isset($_GET["outroTelefone"]))
                 {
                  echo $msg = $_GET["outroTelefone"]; }  ?>">
                 </div>
+
             </div>
+
             <div class="form-row">
+
                 <div class="form-group col-md-6">
                     <label for="inputAddress">Senha<div id="asteristico">*</div></label>
                     <input type="password" class="form-control" id="inauguracao" placeholder="" name="senha" value="<?php
@@ -96,6 +108,7 @@
                 {
                  echo $msg = $_GET["senha"]; }  ?>">
                 </div>
+
                 <div class="form-group col-md-6">
                     <label for="inputAddress">Confirmar senha<div id="asteristico">*</div></label>
                     <input type="password" class="form-control" id="razaoSocial" placeholder="" name="confirmarSenha" value="<?php
@@ -103,8 +116,11 @@
                 {
                  echo $msg = $_GET["confirmarSenha"]; }  ?>">
                 </div>
+
             </div>
+
             <div class="form-row">
+
                 <div class="form-group col-md-6">
                     <label for="inputAddress">Inauguração<div id="asteristico">*</div></label>
                     <input type="date" class="form-control" id="inauguracao" placeholder="" name="inauguracao" value="<?php
@@ -112,31 +128,39 @@
                 {
                  echo $msg = $_GET["inauguracao"]; }  ?>">
                 </div>
+
                 <div class="form-group col-md-6">
                     <label for="inputAddress">Razão social<div id="asteristico">*</div></label>
-                    <input type="number" class="form-control" id="razaoSocial" placeholder="" name="razaoSocial" value="<?php
+                    <input type="text" class="form-control" id="razaoSocial" placeholder="" name="razaoSocial" value="<?php
                 if(isset($_GET["razaoSocial"]))
                 {
                  echo $msg = $_GET["razaoSocial"]; }  ?>">
                 </div>
+
             </div>
+
             <div class="form-row">
+
                 <div class="form-group col-md-6">
                     <label for="inputAddress">CNPJ<div id="asteristico">*</div></label>
-                    <input type="number" class="form-control" id="cnpj" placeholder="" name="cnpj" value="<?php
+                    <input type="cnpj" class="form-control" id="cnpj" placeholder="" name="cnpj" maxlength="14" pattern="([0-9]{14})" title="Digitar o CNPJ completo sem usar caracteres especiais" required value="<?php
                 if(isset($_GET["cnpj"]))
                 {
                  echo $msg = $_GET["cnpj"]; }  ?>">
                 </div>
+
                 <div class="form-group col-md-6">
                     <label for="inputAddress">Inscrição estadual<div id="asteristico">*</div></label>
-                    <input type="number" class="form-control" id="inscricaoEstadual" placeholder="" name="inscricaoEstadual" value="<?php
+                    <input type="inscricaoEstadual" class="form-control" id="inscricaoEstadual" placeholder="" name="inscricaoEstadual" maxlength="10" pattern="([0-9]{10})" title="Digitar a Inscrição estadual completa sem usar caracteres especiais" required name="inscricaoEstadual" value="<?php
                 if(isset($_GET["inscricaoEstadual"]))
                 {
                  echo $msg = $_GET["inscricaoEstadual"]; }  ?>">
                 </div>
+
             </div>
+
             <div class="form-row">
+
                 <div class="form-group col-md-6">
                     <label for="inputAddress">Tipo de loja<div id="asteristico">*</div></label>
                     <select name="tipoDeLoja" id="tipoDeLoja" class="form-control">
@@ -144,10 +168,14 @@
                 if(isset($_GET["tipoDeLoja"]))
                 {
                  echo $msg = $_GET["tipoDeLoja"]; }  ?>" selected>...</option>
-                        <option value="Shopping">Shopping</option>
+                        <option value="Shopping"> Loja de Shopping</option>
                         <option value="Loja de rua">Loja de rua</option>
+                        <option value="Aeroporto">Loja de aeroporto</option>
+                        <option value="Metrô">Quiosque de metrô</option>
+                        <option value="Quiosque de shopping">Quiosque de shopping</option>
                     </select>
                 </div>
+
                 <div class="form-group col-md-6">
                     <label for="inputAddress">E-mail da loja</label>
                     <input type="email" class="form-control" id="emailDaLoja" placeholder="" name="emailDaLoja" value="<?php
@@ -155,8 +183,11 @@
                 {
                  echo $msg = $_GET["emailDaLoja"]; }  ?>">
                 </div>
+
             </div>
+
             <div class="form-row">
+
                 <div class="form-group col-md-6">
                     <label for="inputAddress">Shopping</label>
                     <input type="text" class="form-control" id="shopping" placeholder="" name="shopping" value="<?php
@@ -164,22 +195,28 @@
                 {
                  echo $msg = $_GET["shopping"]; }  ?>">
                 </div>
+
                 <div class="form-group col-md-6">
-                    <label for="inputAddress">Administradora</label>
+                    <label for="inputAddress">Nome da loja<div id="asteristico">*</div></label>
                     <input type="text" class="form-control" id="administradora" placeholder="" name="administradora" value="<?php
                 if(isset($_GET["administradora"]))
                 {
                  echo $msg = $_GET["administradora"]; }  ?>">
                 </div>
+
             </div>
+
             <div class="form-group">
+
                 <label for="inputAddress">Endereço da sede / Matriz<div id="asteristico">*</div></label>
                 <input type="text" class="form-control" id="enderecoDaSede" placeholder="" name="enderecoDaSede" value="<?php
                 if(isset($_GET["enderecoDaSede"]))
                 {
                  echo $msg = $_GET["enderecoDaSede"]; }  ?>">
             </div>
+
             <div class="form-row">
+
                 <div class="form-group col-md-5">
                     <label for="inputCity">Complemento<div id="asteristico">*</div></label>
                     <input type="text" class="form-control" id="complemento" name="complemento" value="<?php
@@ -187,6 +224,7 @@
                 {
                  echo $msg = $_GET["complemento"]; }  ?>">
                 </div>
+
                 <div class="form-group col-md-4">
                     <label for="inputState">Bairro<div id="asteristico">*</div></label>
                     <input type="text" class="form-control" id="bairro" name="bairro" value="<?php
@@ -194,6 +232,7 @@
                 {
                  echo $msg = $_GET["bairro"]; }  ?>">
                 </div>
+
                 <div class="form-group col-md-3">
                     <label for="inputZip">Número<div id="asteristico">*</div></label>
                     <input type="number" class="form-control" id="numeroDeEndereco" name="numeroDeEndereco" value="<?php
@@ -201,8 +240,11 @@
                 {
                  echo $msg = $_GET["numeroDeEndereco"]; }  ?>">
                 </div>
+
             </div>
+
             <div class="form-row">
+
                 <div class="form-group col-md-5">
                     <label for="inputCity">Cidade<div id="asteristico">*</div></label>
                     <input type="text" class="form-control" id="cidade" name="cidade" value="<?php
@@ -210,6 +252,7 @@
                 {
                  echo $msg = $_GET["cidade"]; }  ?>">
                 </div>
+
                 <div class="form-group col-md-4">
                     <label for="inputState">Estado<div id="asteristico">*</div></label>
                     <select id="estado" class="form-control" name="estado">
@@ -243,6 +286,7 @@
                         <option value="Tocantins">Tocantins</option>
                     </select>
                 </div>
+
                 <div class="form-group col-md-3">
                     <label for="inputZip">CEP<div id="asteristico">*</div></label>
                     <input type="number" class="form-control" id="cep" name="cep" value="<?php
@@ -250,8 +294,11 @@
                 {
                  echo $msg = $_GET["cep"]; }  ?>">
                 </div>
+
             </div>
+
             <div class="form-row">
+
                 <div class="form-group col-md-6">
                     <label for="inputAddress">Telefone da loja<div id="asteristico">*</div></label>
                     <input type="number" class="form-control" id="telefoneDaLoja" placeholder="" name="telefoneDaLoja" value="<?php
@@ -259,6 +306,7 @@
                 {
                  echo $msg = $_GET["telefoneDaLoja"]; }  ?>">
                 </div>
+
                 <div class="form-group col-md-6">
                     <label for="inputAddress">Conta bancária<div id="asteristico">*</div></label>
                     <input type="number" class="form-control" id="contaBancaria" placeholder="" name="contaBancaria" value="<?php
@@ -266,6 +314,7 @@
                 {
                  echo $msg = $_GET["contaBancaria"]; }  ?>">
                 </div>
+
             </div>
 
             <div id="campos">

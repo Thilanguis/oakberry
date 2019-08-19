@@ -27,7 +27,7 @@ if ($campoVazio){
             header("Location:franqueadoLogado.php");
          }
             else{
-                $_SESSION["login"]          = $row["emailPrimeiroFranqueado"];
+            $_SESSION["login"]          = $row["emailPrimeiroFranqueado"];
             $_SESSION["senha"]          = $row["senha"];
             $_SESSION["nome"]           = $row["nomePrimeiroFranqueado"];
             $_SESSION["segundoLogin"]   = $row["emailSegundoFranqueado"];

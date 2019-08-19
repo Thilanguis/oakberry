@@ -126,7 +126,22 @@
         </div>
         <div id="collapseSeven" class="collapse" aria-labelledby="headingSeven" data-parent="#duvidas">
             <div class="card-body">
-                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad
+
+                <div class="card border-dark mb-3" style="max-width: 18rem; float: left;">
+                    <div class="card-header">Macon ou Cocil</div>
+                    <div class="card-body">
+                        <h5 class="card-title">Nelson Sena De Oliveira</h5>
+                        <p class="card-text"></p>
+                    </div>
+                </div>
+                <div class="card border-dark mb-3" style="max-width: 18rem; float: right;">
+                    <div class="card-header">Taylor</div>
+                    <div class="card-body text-dark">
+                        <h5 class="card-title">Luciene Tecnica Taylor</h5>
+                        <p class="card-text">kalliltecrefrigeracao@gmail.com.</p>
+                    </div>
+                </div>
+
             </div>
         </div>
     </div>
