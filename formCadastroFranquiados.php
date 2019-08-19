@@ -63,7 +63,7 @@
 
                 <div class="form-group col-md-3">
                     <label for="inputZip">Celular<div id="asteristico">*</div></label> <img id="adicionar" class="adicionar" src="img/icons8-adicionar-48.png" alt=""> <img id="remover" class="remover" src="img/icons8-menos-64.png" alt="">
-                    <input type="tel" class="form-control" maxlength="11" pattern="([0-9]{11})" title="Digitar seu telefone celular com DDD sem usar caracteres especiais" requiredid="telefone" name="telefone" value="<?php
+                    <input type="tel" class="form-control" maxlength="11" pattern="([0-9]{11})" title="Digitar seu telefone celular com DDD sem usar caracteres especiais" required id="telefone" name="telefone" value="<?php
                 if(isset($_GET["telefone"]))
                 {
                  echo $msg = $_GET["telefone"]; }  ?>">
