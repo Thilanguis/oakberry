@@ -29,11 +29,8 @@
 
         <h2>Bem-vindo,
             <?php echo $_SESSION["nome"];
-            if($_SESSION["segundoNome"] == true){
-                echo " e ", $_SESSION["segundoNome"];
-            } 
              ?>
-            !</h2>
+        </h2>
 
         <input id="bemVindo" type="hidden" value="<?php echo $_SESSION["nome"] ?>">
 

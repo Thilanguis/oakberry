@@ -3,8 +3,8 @@
     <a href="formCadastroFranquiados.php">Cadastro</a>
     <img id="logo" src="img/oak-retina.png" alt="">
 
-    <?php if(isset($_SESSION["login"])){
-     if($_SESSION["login"] == true) {?>
+    <?php if(isset($_SESSION["login"]) && isset($_SESSION["statusEmail"])){
+     if($_SESSION["login"] == true && $_SESSION["statusEmail"] == "1") {?>
     <a href="franqueadoLogado.php">
         Menu
     </a>
@@ -22,7 +22,7 @@
             <h5>Login franqueados</h5>
             <hr>
             <div class="form-group">
-                <label for="exampleDropdownFormEmail1">E-mail</label>
+                <label for="exampleDropdownFormEmail1">Usuário</label>
                 <input type="text" class="form-control" id="exampleDropdownFormEmail1" placeholder="" name="login" value="<?php
                 if(isset($_GET["login"]))
                 {

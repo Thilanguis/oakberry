@@ -14,7 +14,7 @@ body {
 
 #btnCadastrarFraquiados {
     text-align: right;
-    margin-bottom: 20px;
+    margin-bottom: 40px;
 }
 
 #adicionar {
@@ -31,6 +31,7 @@ body {
     color: rgba(195, 39, 70, 0.73);
     font-style: italic;
     font-weight: bold;
+    text-align: center;
 }
 
 #asteristico {
