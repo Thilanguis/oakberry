@@ -15,7 +15,7 @@
     ?>
 
     <link rel="stylesheet" href="css/styleCadastro.css">
-    
+
     <script type="text/javascript" src="js/jquery.mask.min.js"></script>
 
 </head>
@@ -27,7 +27,7 @@
     ?>
 
     <div class="container" id="cadastro">
-       
+
         <div id="sumirDiv">
             <?php
         if(isset($_GET["cadastrado"]))
@@ -63,11 +63,13 @@
                 {
                  echo $msg = $_GET["email"]; }  ?>">
                 </div>
-                
-                <script 
-                 src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"> </script>
-                 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.11/jquery.mask.min.js"></script>
-                <script>$("#telefone, #celular").mask("(00) 00000-0000");</script>
+
+                <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"> </script>
+                <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.11/jquery.mask.min.js"></script>
+                <script>
+                    $("#telefone, #celular").mask("(00) 00000-0000");
+
+                </script>
 
                 <div class="form-group col-md-3">
                     <label for="inputZip">Celular<div id="asteristico">*</div></label> <img id="adicionar" class="adicionar" src="img/icons8-adicionar-48.png" alt=""> <img id="remover" class="remover" src="img/icons8-menos-64.png" alt="">
@@ -151,7 +153,7 @@
 
                 <div class="form-group col-md-6">
                     <label for="inputAddress">CNPJ<div id="asteristico">*</div></label>
-                    <input type="text" class="form-control" id="cnpj" placeholder="" name="cnpj" maxlength="17s" pattern="([0-9]{17})" title="Digitar o CNPJ completo sem usar caracteres especiais" onkeyup="FormataCnpj(this,event)" onblur="if(!validarCNPJ(this.value)){alert('CNPJ Informado é inválido'); this.value='';}" required value="<?php
+                    <input type="text" class="form-control" id="cnpj" placeholder="" name="cnpj" maxlength="18" pattern="([0-9]{18})" title="Digitar o CNPJ completo sem usar caracteres especiais" onkeyup="FormataCnpj(this,event)" onblur="if(!validarCNPJ(this.value)){alert('CNPJ Informado é inválido'); this.value='';}" required value="<?php
                 if(isset($_GET["cnpj"]))
                 {
                  echo $msg = $_GET["cnpj"]; }  ?>">
