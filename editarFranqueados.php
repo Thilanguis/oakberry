@@ -5,6 +5,8 @@
     <h4>Editar seus contatos </h4>
 
     <?php
+    
+    include_once 'funcoesProjeto.php';
            
     include_once 'conexaoComBanco.php';
     
@@ -30,9 +32,17 @@
                 <label for="inputState">E-mail</label>
                 <input type="email" class="form-control" id="email" value="<?php echo $row["emailPrimeiroFranqueado"] ?>" name="email">
             </div>
+
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"> </script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.11/jquery.mask.min.js"></script>
+            <script>
+                $("#telefone, #celular").mask("(00) 00000-0000");
+
+            </script>
+
             <div class="form-group col-md-3">
-                <label for="inputZip">Telefone</label> <img id="adicionar" class="adicionar" src="img/icons8-adicionar-48.png" alt=""> <img id="remover" class="remover" src="img/icons8-menos-64.png" alt="">
-                <input type="number" class="form-control" id="telefone" value="<?php echo $row["telefonePrimeiroFranqueado"] ?>" name="telefone">
+                <label for="inputZip">Celular</label> <img id="adicionar" class="adicionar" src="img/icons8-adicionar-48.png" alt=""> <img id="remover" class="remover" src="img/icons8-menos-64.png" alt="">
+                <input type="text" class="phone_with_ddd form-control" maxlength="11" title="Digitar seu telefone celular com DDD sem usar caracteres especiais" required id="telefone" name="telefone" value="<?php echo $row["telefonePrimeiroFranqueado"] ?>">
             </div>
         </div>
 
@@ -46,7 +56,7 @@
                 <input class="franqueado form-control" id="" value="<?php echo $row["emailSegundoFranqueado"] ?>" name="outroEmail">
             </div>
             <div class="form-group col-md-3">
-                <label class="franqueado" for="">Telefone</label>
+                <label class="franqueado" for="">Celular</label>
                 <input class="franqueado form-control" id="" value="<?php echo $row["telefoneSegundoFranqueado"] ?>" name="outroTelefone">
             </div>
         </div>
@@ -69,14 +79,14 @@
             </div>
             <div class="form-group col-md-6">
                 <label for="inputAddress">Razão social</label>
-                <input type="number" class="form-control" id="inputPassword4" placeholder="" value="<?php echo $row["razaoSocial"] ?>" name="razaoSocial">
+                <input type="text" class="form-control" id="inputPassword4" placeholder="" value="<?php echo $row["razaoSocial"] ?>" name="razaoSocial">
             </div>
         </div>
 
         <div class="form-row">
             <div class="form-group col-md-6">
                 <label for="inputAddress">CNPJ</label>
-                <input type="number" class="form-control" id="inputEmail4" placeholder="" value="<?php echo $row["cnpj"] ?>" name="cnpj">
+                <input type="text" class="form-control" id="cnpj" placeholder="" name="cnpj" maxlength="18" title="Digitar o CNPJ completo sem usar caracteres especiais" onkeyup="FormataCnpj(this,event)" onblur="if(!validarCNPJ(this.value)){alert('CNPJ Informado é inválido');this.value='';}" required value="<?php echo $row["cnpj"] ?>">
             </div>
             <div class="form-group col-md-6">
                 <label for="inputAddress">Inscrição estadual</label>
@@ -105,8 +115,8 @@
                 <input type="text" class="form-control" id="inputEmail4" placeholder="" value="<?php echo $row["shopping"] ?>" name="shopping">
             </div>
             <div class="form-group col-md-6">
-                <label for="inputAddress">Administradora</label>
-                <input type="text" class="form-control" id="inputPassword4" placeholder="" value="<?php echo $row["administradora"] ?>" name="administradora">
+                <label for="inputAddress">Nome da loja</label>
+                <input type="text" class="form-control" id="inputPassword4" placeholder="" value="<?php echo $row["nomeDaLoja"] ?>" name="nomeDaLoja">
             </div>
         </div>
 

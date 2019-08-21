@@ -30,7 +30,7 @@
     $tipoDeLoja               = $_POST["tipoDeLoja"];
     $emailDaLoja              = $_POST["emailDaLoja"];
     $shopping                 = $_POST["shopping"];
-    $administradora           = $_POST["administradora"];
+    $nomeDaLoja               = $_POST["nomeDaLoja"];
     $enderecoDaSede           = $_POST["enderecoDaSede"];
     $complemento              = $_POST["complemento"];
     $bairro                   = $_POST["bairro"];
@@ -43,7 +43,7 @@
     $senha                    = $_POST["senha"];
     $confirmarSenha           = $_POST["confirmarSenha"];
     
-    $franqueados = "update franqueados set  inauguracao='".$inauguracao."', razaoSocial='".$razaoSocial."', cnpj='".$cnpj."', inscricaoEstadual='".$inscricaoEstadual."', tipoDeLoja='".$tipoDeLoja."', emailDaLoja='".$emailDaLoja."', shopping='".$shopping."', administradora='".$administradora."', telefoneLoja='".$telefoneDaLoja."', contaBancaria='".$contaBancaria."', nomePrimeiroFranqueado='".$franqueado."', emailPrimeiroFranqueado='".$email."', telefonePrimeiroFranqueado='".$telefone."', nomeSegundoFranqueado='".$outroFranqueado."', emailSegundoFranqueado='".$outroEmail."', telefoneSegundoFranqueado='".$outroTelefone."', senha='".$senha."', confirmarSenha='".$confirmarSenha."', enderecoMatriz='".$enderecoDaSede."', complemento='".$complemento."', bairro='".$bairro."', numero='".$numeroDeEndereco."', cidade='".$cidade."', estado='".$estado."', cep='".$cep."' where id=".$id ;
+    $franqueados = "update franqueados set  inauguracao='".$inauguracao."', razaoSocial='".$razaoSocial."', cnpj='".$cnpj."', inscricaoEstadual='".$inscricaoEstadual."', tipoDeLoja='".$tipoDeLoja."', emailDaLoja='".$emailDaLoja."', shopping='".$shopping."', nomeDaLoja='".$nomeDaLoja."', telefoneLoja='".$telefoneDaLoja."', contaBancaria='".$contaBancaria."', nomePrimeiroFranqueado='".$franqueado."', emailPrimeiroFranqueado='".$email."', telefonePrimeiroFranqueado='".$telefone."', nomeSegundoFranqueado='".$outroFranqueado."', emailSegundoFranqueado='".$outroEmail."', telefoneSegundoFranqueado='".$outroTelefone."', senha='".$senha."', confirmarSenha='".$confirmarSenha."', enderecoMatriz='".$enderecoDaSede."', complemento='".$complemento."', bairro='".$bairro."', numero='".$numeroDeEndereco."', cidade='".$cidade."', estado='".$estado."', cep='".$cep."' where id=".$id ;
         
         
         $campoVazio = $franqueado != "" && $email != "" && $telefone != "" && $inauguracao != "" && $razaoSocial != "" && $cnpj != "" && $inscricaoEstadual != "" && $tipoDeLoja != "" && $emailDaLoja != "" && $enderecoDaSede != "" && $complemento != "" && $bairro != "" && $numeroDeEndereco != "" && $cidade != "" && $estado != "" && $cep != "" && $telefoneDaLoja != "" && $contaBancaria != "" && $senha != "" && $confirmarSenha != "";
@@ -68,12 +68,12 @@
                 }
             }
             else{
-                header('location:franqueadoLogado.php?msg=Preencher todos os campos!&franqueado='.$franqueado.'&email='.$email.'&telefone='.$telefone.'&outroFranqueado='.$outroFranqueado.'&outroEmail='.$outroEmail.'&outroTelefone='.$outroTelefone.'&inauguracao='.$inauguracao.'&razaoSocial='.$razaoSocial.'&cnpj='.$cnpj.'&inscricaoEstadual='.$inscricaoEstadual.'&tipoDeLoja='.$tipoDeLoja.'&emailDaLoja='.$emailDaLoja.'&shopping='.$shopping.'&administradora='.$administradora.'&enderecoDaSede='.$enderecoDaSede.'&complemento='.$complemento.'&bairro='.$bairro.'&numeroDeEndereco='.$numeroDeEndereco.'&cidade='.$cidade.'&estado='.$estado.'&cep='.$cep.'&telefoneDaLoja='.$telefoneDaLoja.'&contaBancaria='.$contaBancaria.'');
+                header('location:franqueadoLogado.php?msg=Preencher todos os campos!&franqueado='.$franqueado.'&email='.$email.'&telefone='.$telefone.'&outroFranqueado='.$outroFranqueado.'&outroEmail='.$outroEmail.'&outroTelefone='.$outroTelefone.'&inauguracao='.$inauguracao.'&razaoSocial='.$razaoSocial.'&cnpj='.$cnpj.'&inscricaoEstadual='.$inscricaoEstadual.'&tipoDeLoja='.$tipoDeLoja.'&emailDaLoja='.$emailDaLoja.'&shopping='.$shopping.'&nomeDaLoja='.$nomeDaLoja.'&enderecoDaSede='.$enderecoDaSede.'&complemento='.$complemento.'&bairro='.$bairro.'&numeroDeEndereco='.$numeroDeEndereco.'&cidade='.$cidade.'&estado='.$estado.'&cep='.$cep.'&telefoneDaLoja='.$telefoneDaLoja.'&contaBancaria='.$contaBancaria.'');
                }
             }
         
           else{
-              header('location:franqueadoLogado.php?msg=Senhas não conferem!&franqueado='.$franqueado.'&email='.$email.'&telefone='.$telefone.'&outroFranqueado='.$outroFranqueado.'&outroEmail='.$outroEmail.'&outroTelefone='.$outroTelefone.'&inauguracao='.$inauguracao.'&razaoSocial='.$razaoSocial.'&cnpj='.$cnpj.'&inscricaoEstadual='.$inscricaoEstadual.'&tipoDeLoja='.$tipoDeLoja.'&emailDaLoja='.$emailDaLoja.'&shopping='.$shopping.'&administradora='.$administradora.'&enderecoDaSede='.$enderecoDaSede.'&complemento='.$complemento.'&bairro='.$bairro.'&numeroDeEndereco='.$numeroDeEndereco.'&cidade='.$cidade.'&estado='.$estado.'&cep='.$cep.'&telefoneDaLoja='.$telefoneDaLoja.'&contaBancaria='.$contaBancaria.'');
+              header('location:franqueadoLogado.php?msg=Senhas não conferem!&franqueado='.$franqueado.'&email='.$email.'&telefone='.$telefone.'&outroFranqueado='.$outroFranqueado.'&outroEmail='.$outroEmail.'&outroTelefone='.$outroTelefone.'&inauguracao='.$inauguracao.'&razaoSocial='.$razaoSocial.'&cnpj='.$cnpj.'&inscricaoEstadual='.$inscricaoEstadual.'&tipoDeLoja='.$tipoDeLoja.'&emailDaLoja='.$emailDaLoja.'&shopping='.$shopping.'&nomeDaLoja='.$nomeDaLoja.'&enderecoDaSede='.$enderecoDaSede.'&complemento='.$complemento.'&bairro='.$bairro.'&numeroDeEndereco='.$numeroDeEndereco.'&cidade='.$cidade.'&estado='.$estado.'&cep='.$cep.'&telefoneDaLoja='.$telefoneDaLoja.'&contaBancaria='.$contaBancaria.'');
               echo "Senhas não conferem!";
           }
         mysqli_close($con);

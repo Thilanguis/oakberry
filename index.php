@@ -21,6 +21,15 @@
     include_once 'header.php';
     ?>
 
+    <div id="sumirDiv">
+        <?php
+        if(isset($_GET["verificaEmail"]))
+                { ?>
+        <div class="alert alert-success animated zoomIn container" role="alert" style="width: 300px; margin-top: 0; text-align: center; padding: 0; height: auto;">
+            <?php echo $verificaEmail = $_GET["verificaEmail"]; ?>
+        </div> <?php } ?>
+    </div>
+
     <div id="carousel">
         <!-- carrosel -->
         <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
