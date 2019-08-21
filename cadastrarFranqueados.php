@@ -23,7 +23,7 @@
     $confirmarSenha     = md5(addslashes($_POST["confirmarSenha"]));
     
     
-    $franqueados = "insert into franqueados (id, usuario, inauguracao, razaoSocial, cnpj, inscricaoEstadual, tipoDeLoja, emailDaLoja, shopping, administradora, telefoneLoja, contaBancaria, nomePrimeiroFranqueado, emailPrimeiroFranqueado, telefonePrimeiroFranqueado, nomeSegundoFranqueado, emailSegundoFranqueado, telefoneSegundoFranqueado, senha, confirmarSenha, enderecoMatriz, complemento, bairro, numero, cidade, estado, cep, nomeDeUsuario, statusEMail) values(null,'".$status."', null, null, null, null, null, null , null ,null, null, null, null,'".$email."', null, null, null, null,'".$senha."','".$confirmarSenha."', null, null, null, null, null, null, null, '".$nomeDeUsuario."', null)";
+    $franqueados = "insert into franqueados (id, usuario, inauguracao, razaoSocial, cnpj, inscricaoEstadual, tipoDeLoja, emailDaLoja, shopping, nomeDaLoja, telefoneLoja, contaBancaria, nomePrimeiroFranqueado, emailPrimeiroFranqueado, telefonePrimeiroFranqueado, nomeSegundoFranqueado, emailSegundoFranqueado, telefoneSegundoFranqueado, senha, confirmarSenha, enderecoMatriz, complemento, bairro, numero, cidade, estado, cep, nomeDeUsuario, statusEMail) values(null,'".$status."', null, null, null, null, null, null , null ,null, null, null, null,'".$email."', null, null, null, null,'".$senha."','".$confirmarSenha."', null, null, null, null, null, null, null, '".$nomeDeUsuario."', null)";
         
         
         $campoVazio = $email != "" && $senha != "" && $confirmarSenha != "";

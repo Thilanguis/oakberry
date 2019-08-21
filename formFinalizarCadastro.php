@@ -28,6 +28,15 @@
     include_once 'header.php';
     ?>
 
+    <div id="logout"><a href="#"><i onclick="deslogarDoSistema()" class="fas fa-sign-out-alt"></i></a></div>
+
+    <h2>Bem-vindo,
+        <?php echo $_SESSION["nome"];
+             ?>
+    </h2>
+
+    <input id="bemVindo" type="hidden" value="<?php echo $_SESSION["nome"] ?>">
+
     <div class="container" id="cadastro">
 
         <div id="sumirDiv">
@@ -45,7 +54,7 @@
             </div> <?php } ?>
         </div>
 
-        <h4>Cadastro de franqueados</h4>
+        <h4>Finalize seu cadastro</h4>
         <form method="post" action="cadastrarFranqueados.php">
 
             <div class="form-row">
@@ -210,10 +219,10 @@
 
                 <div class="form-group col-md-6">
                     <label for="inputAddress">Nome da loja<div id="asteristico">*</div></label>
-                    <input type="text" class="form-control" id="administradora" placeholder="" name="administradora" value="<?php
-                if(isset($_GET["administradora"]))
+                    <input type="text" class="form-control" id="nomeDaLoja" placeholder="" name="nomeDaLoja" value="<?php
+                if(isset($_GET["nomeDaLoja"]))
                 {
-                 echo $msg = $_GET["administradora"]; }  ?>">
+                 echo $msg = $_GET["nomeDaLoja"]; }  ?>">
                 </div>
 
             </div>
