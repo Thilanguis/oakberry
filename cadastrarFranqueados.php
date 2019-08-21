@@ -15,30 +15,30 @@
         <?php
         
         include_once 'conexaoComBanco.php';
-        
-    $status = "user";
-    $nomeDeUsuario      = addslashes($_POST["nomeDeUsuario"]);
-    $email              = addslashes($_POST["email"]);
-    $senha              = md5(addslashes($_POST["senha"]));
-    $confirmarSenha     = md5(addslashes($_POST["confirmarSenha"]));
-    
-    
-    $franqueados = "insert into franqueados (id, usuario, inauguracao, razaoSocial, cnpj, inscricaoEstadual, tipoDeLoja, emailDaLoja, shopping, nomeDaLoja, telefoneLoja, contaBancaria, nomePrimeiroFranqueado, emailPrimeiroFranqueado, telefonePrimeiroFranqueado, nomeSegundoFranqueado, emailSegundoFranqueado, telefoneSegundoFranqueado, senha, confirmarSenha, enderecoMatriz, complemento, bairro, numero, cidade, estado, cep, nomeDeUsuario, statusEMail) values(null,'".$status."', null, null, null, null, null, null , null ,null, null, null, null,'".$email."', null, null, null, null,'".$senha."','".$confirmarSenha."', null, null, null, null, null, null, null, '".$nomeDeUsuario."', null)";
-        
-        
+        $status = "user";
+        $nomeDeUsuario  = addslashes($_POST["nomeDeUsuario"]);
+        $email          = addslashes($_POST["email"]);
+        $senha          = md5(addslashes($_POST["senha"]));
+        $confirmarSenha = md5(addslashes($_POST["confirmarSenha"]));
+
+
+        $franqueados = "insert into franqueados (id, usuario, inauguracao, razaoSocial, cnpj, inscricaoEstadual, tipoDeLoja, emailDaLoja, shopping, nomeDaLoja, telefoneLoja, contaBancaria, nomePrimeiroFranqueado, emailPrimeiroFranqueado, telefonePrimeiroFranqueado, nomeSegundoFranqueado, emailSegundoFranqueado, telefoneSegundoFranqueado, senha, confirmarSenha, enderecoMatriz, complemento, bairro, numero, cidade, estado, cep, nomeDeUsuario, statusEMail) values(null,'".$status."', null, null, null, null, null, null , null ,null, null, null, null,'".$email."', null, null, null, null,'".$senha."','".$confirmarSenha."', null, null, null, null, null, null, null, '".$nomeDeUsuario."', null)";
         $campoVazio = $email != "" && $senha != "" && $confirmarSenha != "";
         
-        //$verificandoEmailExistente = "select emailPrimeiroFranqueado from contatofranqueado";
+        $verificandoEmailExistente = "select nomeDeUsuario from franqueados where nomeDeUsuario='".$nomeDeUsuario."'";
         
-        //$resultado = mysqli_query($con, $verificandoEmailExistente);
+        $result = mysqli_query($con, $verificandoEmailExistente);
         
-        //$row = mysqli_fetch_array($resultado);
+        $registro = mysqli_num_rows($result);
         
-        //$comparandoEMail = $row["emailPrimeiroFranqueado"] != $email;
+        $row = mysqli_fetch_array($result);
         
         $conferirSenhas = $senha == $confirmarSenha;
         
-        if($conferirSenhas){
+        echo $registro; 
+        
+if($registro == 0) {
+    if($conferirSenhas){
         if($campoVazio){
             if(mysqli_query($con, $franqueados)){
                  header('location:formCadastroFranquiados.php?cadastrado=Cadastro realizado com Sucesso <br> Confirme seu cadastro no seu email');
@@ -65,6 +65,13 @@
               header('location:formCadastroFranquiados.php?msg=Senhas não conferem!&email='.$email.'&nomeDeUsuario='.$nomeDeUsuario.'');
               echo "Senhas não conferem!";
           }
+    }
+     
+else{
+    header('location:formCadastroFranquiados.php?msg=Nome de usuário já existe!&email='.$email.'&nomeDeUsuario='.$nomeDeUsuario.'');
+              echo "Nome de usuário já existe!";
+}
+   
         mysqli_close($con);
         ?>
 
