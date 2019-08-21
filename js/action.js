@@ -98,6 +98,16 @@ $(document).ready(function () {
     });
 });
 
+//Mostrar formulário cadastro colaboradores
+$(document).ready(function () {
+    $('.formularioColaboradores').hide();
+    $('.fa-user-plus').click(function () {
+        $('.formularioColaboradores').toggle();
+
+    });
+});
+
+
 //Integração com api do whatsapp para telefone Bárbara
 function mensagemWhatsapp(mensagemWhatsapp) {
 

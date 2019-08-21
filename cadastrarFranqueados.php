@@ -35,8 +35,6 @@
         
         $conferirSenhas = $senha == $confirmarSenha;
         
-        echo $registro; 
-        
 if($registro == 0) {
     if($conferirSenhas){
         if($campoVazio){

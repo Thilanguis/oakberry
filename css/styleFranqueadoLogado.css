@@ -51,6 +51,12 @@ main {
     color: white;
 }
 
+.adicionarColaboradores {
+    font-size: 31px;
+    color: white;
+    margin-left: 8px;
+}
+
 .menu--closed {
     height: 70px;
 }
@@ -298,4 +304,19 @@ nav .dot {
 #duvidas {
     width: 720px;
     margin-left: 18%;
+}
+
+#asteristico {
+    color: rgba(195, 39, 70, 0.73);
+    font-style: italic;
+    font-weight: bold;
+    display: inline-block;
+}
+
+#campos {
+    color: rgba(195, 39, 70, 0.73);
+    font-style: italic;
+    font-weight: bold;
+    text-align: center;
+    padding-right: 340px;
 }

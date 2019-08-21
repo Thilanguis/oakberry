@@ -27,6 +27,10 @@
                 <i class="fab fa-whatsapp whatsapp icon"></i>
             </a>
 
+            <a href="#" title="Cadastrar colaboradores">
+                <i class="fas fa-user-plus adicionarColaboradores icon"></i>
+            </a>
+
         </div>
     </div>
 </main>
