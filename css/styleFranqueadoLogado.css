@@ -196,6 +196,11 @@ h4 {
     text-align: right;
 }
 
+#btnCadastrarColaboradores {
+    text-align: center;
+    margin-left: 340px;
+}
+
 #xEditar {
     color: darkred;
     font-size: 20px;
@@ -319,4 +324,12 @@ nav .dot {
     font-weight: bold;
     text-align: center;
     padding-right: 340px;
+}
+
+.formularioColaboradores {
+    width: auto;
+    overflow-y: scroll;
+    overflow-x: auto;
+    height: 430px;
+    padding: 50px; 
 }

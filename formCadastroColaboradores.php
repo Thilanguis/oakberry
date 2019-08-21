@@ -14,7 +14,7 @@
         </div> <?php } ?>
     </div>
 
-    <div class="formularioColaboradores">
+    <div class="">
         <h4>Cadastro de franqueados</h4>
         <form method="post" action="cadastroColaboradores.php">
 
@@ -76,7 +76,7 @@
                 <p>* Campos obrigatórios</p>
             </div>
 
-            <div id="btnCadastrarFraquiados">
+            <div id="btnCadastrarColaboradores">
                 <button type="submit" class="btn btn-outline-dark">Cadastrar</button>
             </div>
         </form>
