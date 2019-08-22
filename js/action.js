@@ -266,6 +266,6 @@ setTimeout(function () {
 function excluirColaboradores(id) {
 
     if (confirm('Deseja realmente excluir este Colaborador?')) {
-        location.href = 'excluirColaboradores.php?id=' + id;
+        location.href = 'blacklist.php?id=' + id;
     }
 }
