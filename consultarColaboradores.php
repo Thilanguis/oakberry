@@ -24,25 +24,25 @@
                     <th scope="col">Nome</th>
                     <th scope="col">CPF</th>
                     <th scope="col">RG</th>
-                    <th scope="col">Data admissão</th>
-                    <th scope="col">Data demissão</th>
+                    <th scope="col">Admissão&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
+                    <th scope="col">Demissão&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
                     <th scope="col">Nome da mãe</th>
+                    <th scope="col">Excluir</th>
                 </tr>
             </thead>
             <tbody>
-                <?php while($row = mysqli_fetch_array($result)){ ?>
-                <tr>
-                    <?php
+                <?php while($row = mysqli_fetch_array($result)){ 
+                echo "<tr>";
                     echo "<td>".$row["nomeCompleto"]."</td>";
                     echo "<td>".$row["cpf"]."</td>";
                     echo "<td>".$row["rg"]."</td>";
                     echo "<td>".date('d-m-Y', strtotime($row["dataAdmissao"]))."</td>";
                     echo "<td>".$row["dataDemissao"]."</td>";
                     echo "<td>".$row["nomeDaMae"]."</td>";
-                    ?>
-                </tr>
+                    echo "<td onclick='excluirColaboradores(".$row["id"].")' style='text-align: center'><a href='#'><i class='fas fa-trash-alt'></i></a></td>";
+               echo "</tr>";
 
-                <?php } ?>
+                 } ?>
             </tbody>
         </table>
 

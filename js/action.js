@@ -262,3 +262,10 @@ function deslogarDoSistema() {
 setTimeout(function () {
     $('#sumirDiv').hide('fast');
 }, 5000);
+
+function excluirColaboradores(id) {
+
+    if (confirm('Deseja realmente excluir este Colaborador?')) {
+        location.href = 'excluirColaboradores.php?id=' + id;
+    }
+}
