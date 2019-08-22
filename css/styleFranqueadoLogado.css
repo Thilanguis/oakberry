@@ -31,30 +31,40 @@ main {
 .carrinho {
     font-size: 30px;
     color: white;
-    margin-right: 10px;
+    margin-right: 5px;
 }
 
 .question {
     font-size: 30px;
     color: white;
     margin-right: 3px;
+    margin-top: 15px;
 }
 
 .editar {
     font-size: 30px;
     color: white;
     margin-left: 3px;
+    margin-top: 15px;
 }
 
 .whatsapp {
     font-size: 35px;
     color: white;
+    margin-top: 15px;
 }
 
 .adicionarColaboradores {
     font-size: 31px;
     color: white;
     margin-left: 8px;
+    margin-top: 15px;
+}
+
+.consultarColaboradores {
+    font-size: 30px;
+    color: white;
+    margin-top: 15px;
 }
 
 .menu--closed {
@@ -62,12 +72,11 @@ main {
 }
 
 .menu--open {
-    height: 400px;
+    height: 500px;
 }
 
 .button {
     transition: 0.3s transform ease-in-out, 0.3s opacity ease-in-out;
-    ;
     cursor: pointer;
     position: absolute;
     display: flex;
@@ -165,6 +174,14 @@ h2 {
 }
 
 .editarCadastroFranqueados {
+    width: auto;
+    overflow-y: scroll;
+    overflow-x: auto;
+    height: 430px;
+    padding: 50px;
+}
+
+.tabelaColaboradores {
     width: auto;
     overflow-y: scroll;
     overflow-x: auto;
@@ -331,5 +348,5 @@ nav .dot {
     overflow-y: scroll;
     overflow-x: auto;
     height: 430px;
-    padding: 50px; 
+    padding: 50px;
 }

@@ -1,32 +1,19 @@
+<?php include_once 'verificaLogin.php'; ?>
 <div class="formularioColaboradores animated zoomIn">
-    <div id="sumirDiv">
-        <?php
-        if(isset($_GET["cadastrado"]))
-                { ?>
-        <div class="alert alert-success animated zoomIn container" role="alert" style="width: 300px; margin-top: 10px; text-align: center; padding: 0;">
-            <?php echo $msg = $_GET["cadastrado"]; ?>
-        </div> <?php }
-        
-       if(isset($_GET["msg"]))
-                { ?>
-        <div class="alert alert-danger animated zoomIn container" role="alert" style="width: 300px; margin-top: 10px; text-align: center; padding: 0;">
-            <?php echo $msg = $_GET["msg"]; ?>
-        </div> <?php } ?>
-    </div>
 
     <div class="">
-        <h4>Cadastro de franqueados</h4>
+        <h4>Cadastro de colaboradores</h4>
         <form method="post" action="cadastroColaboradores.php">
 
             <div class="form-row">
                 <div class="form-group col-md-3"></div>
 
                 <div class="form-group col-md-6">
-                    <label for="inputState">Nome de usuário<div id="asteristico">*</div></label>
-                    <input type="text" class="form-control" id="nomeDeUsuario" name="nomeDeUsuario" value="<?php
-                if(isset($_GET["nomeDeUsuario"]))
+                    <label for="inputState">Nome completo<div id="asteristico">*</div></label>
+                    <input type="text" class="form-control" id="nomeCompleto" name="nomeCompleto" value="<?php
+                if(isset($_GET["nomeCompleto"]))
                 {
-                 echo $msg = $_GET["nomeDeUsuario"]; }  ?>">
+                 echo $msg = $_GET["nomeCompleto"]; }  ?>">
                 </div>
 
 
@@ -36,11 +23,11 @@
                 <div class="form-group col-md-3"></div>
 
                 <div class="form-group col-md-6">
-                    <label for="inputState">E-mail<div id="asteristico">*</div></label>
-                    <input type="email" class="form-control" id="email" name="email" value="<?php
-                if(isset($_GET["email"]))
+                    <label for="inputState">CPF<div id="asteristico">*</div></label>
+                    <input type="text" class="form-control" id="cpf" name="cpf" value="<?php
+                if(isset($_GET["cpf"]))
                 {
-                 echo $msg = $_GET["email"]; }  ?>">
+                 echo $msg = $_GET["cpf"]; }  ?>">
                 </div>
 
             </div>
@@ -50,11 +37,11 @@
                 <div class="form-group col-md-3"></div>
 
                 <div class="form-group col-md-6">
-                    <label for="inputAddress">Senha<div id="asteristico">*</div></label>
-                    <input type="password" class="form-control" id="inauguracao" placeholder="" name="senha" value="<?php
-                if(isset($_GET["senha"]))
+                    <label for="inputAddress">RG<div id="asteristico">*</div></label>
+                    <input type="text" class="form-control" id="rg" placeholder="" name="rg" value="<?php
+                if(isset($_GET["rg"]))
                 {
-                 echo $msg = $_GET["senha"]; }  ?>">
+                 echo $msg = $_GET["rg"]; }  ?>">
                 </div>
 
             </div>
@@ -64,11 +51,24 @@
                 <div class="form-group col-md-3"></div>
 
                 <div class="form-group col-md-6">
-                    <label for="inputAddress">Confirmar senha<div id="asteristico">*</div></label>
-                    <input type="password" class="form-control" id="razaoSocial" placeholder="" name="confirmarSenha" value="<?php
-                if(isset($_GET["confirmarSenha"]))
+                    <label for="inputAddress">Data admissão<div id="asteristico">*</div></label>
+                    <input type="date" class="form-control" id="dataAdmissao" placeholder="" name="dataAdmissao" value="<?php
+                if(isset($_GET["dataAdmissao"]))
                 {
-                 echo $msg = $_GET["confirmarSenha"]; }  ?>">
+                 echo $msg = $_GET["dataAdmissao"]; }  ?>">
+                </div>
+            </div>
+
+            <div class="form-row">
+
+                <div class="form-group col-md-3"></div>
+
+                <div class="form-group col-md-6">
+                    <label for="inputAddress">Nome da mãe<div id="asteristico">*</div></label>
+                    <input type="text" class="form-control" id="nomeDaMae" placeholder="" name="nomeDaMae" value="<?php
+                if(isset($_GET["nomeDaMae"]))
+                {
+                 echo $msg = $_GET["nomeDaMae"]; }  ?>">
                 </div>
             </div>
 

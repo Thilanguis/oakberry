@@ -15,6 +15,7 @@
         <?php
         
         include_once 'conexaoComBanco.php';
+        
         $status = "user";
         $nomeDeUsuario  = addslashes($_POST["nomeDeUsuario"]);
         $email          = addslashes($_POST["email"]);

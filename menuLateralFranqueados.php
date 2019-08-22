@@ -9,7 +9,7 @@
         <div class="tools tools--hidden">
             <!-- Carrinho icon fontawsome-->
             <a href="#">
-                <i class="fas fa-shopping-cart carrinho icon" title="Fazer seus pedidos" id="fa-shopping-cart" onclick="mudarCor()"></i>
+                <i class="fas fa-shopping-cart carrinho icon" title="Fazer seus pedidos" id="fa-shopping-cart"></i>
             </a>
 
             <!-- Dúvidas icon fontawsome-->
@@ -29,6 +29,9 @@
 
             <a href="#" title="Cadastrar colaboradores">
                 <i class="fas fa-user-plus adicionarColaboradores icon"></i>
+            </a>
+            <a href="#" title="Consultar colaboradores">
+                <i class="fas fa-tablet-alt consultarColaboradores icon"></i>
             </a>
 
         </div>

@@ -60,6 +60,9 @@
         <?php include_once 'whatsappFranqueados.php'; ?>
 
         <?php include_once 'formCadastroColaboradores.php' ?>
+
+        <?php include_once 'consultarColaboradores.php' ?>
+
     </div>
 
     <?php include_once 'footer.php'; ?>
