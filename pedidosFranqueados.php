@@ -1,3 +1,5 @@
+<?php include_once 'head.php'; ?>
+
 <div class="menuPedidos animated zoomIn">
     <h4 id="h4pedidos">Faça seus pedidos</h4>
     <p>
@@ -24,7 +26,7 @@
             <div class="collapse multi-collapse" id="multiCollapseExample2">
                 <div class="card card-body">
                     <ul>
-                        <a href="" class="listaPedidos">
+                        <a href="#" class="listaPedidos">
                             <li class="listaPedidos">Uniformes</li>
                         </a>
                         <a href="" class="listaPedidos">

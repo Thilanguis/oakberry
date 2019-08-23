@@ -52,6 +52,7 @@
         <?php include_once 'menuLateralFranqueados.php'; ?>
 
         <?php include_once 'pedidosFranqueados.php'; ?>
+        <?php include_once 'modalUniformes.php'; ?>
 
         <?php include_once 'ajudaFranqueados.php'; ?>
 

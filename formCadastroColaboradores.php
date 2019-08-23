@@ -38,7 +38,7 @@
 
                 <div class="form-group col-md-6">
                     <label for="inputAddress">RG<div id="asteristico">*</div></label>
-                    <input type="text" class="form-control" id="rg" placeholder="" name="rg" value="<?php
+                    <input type="text" class="form-control" id="rg" placeholder="" name="rg" onblur="RgFormat();" value="<?php
                 if(isset($_GET["rg"]))
                 {
                  echo $msg = $_GET["rg"]; }  ?>">

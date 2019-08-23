@@ -109,7 +109,13 @@
         if (Resto != parseInt(strCPF.substring(10, 11))) return false;
         return true;
     }
-    //var strCPF = "12345678909";
-    //alert(TestaCPF(strCPF));
+
+</script>
+
+<!-- Formatar campo de input do CPF -->
+<script type="text/javascript">
+    $(document).ready(function() {
+        $("#rg").mask("99 999 999-9");
+    });
 
 </script>
