@@ -1,15 +1,15 @@
 <?php include_once 'verificaLogin.php'; ?>
-<div class="tabelaColaboradores animated zoomIn">
+<div class="tabelaBlacklist animated zoomIn">
 
     <div class="">
-        <h4>Relação de colaboradores</h4>
+        <h4>Relação de blacklist</h4>
 
         <?php
         include_once 'conexaoComBanco.php';
         
         $idFranqueados = $_SESSION["idFranqueado"];
         
-        $sql = "SELECT * FROM colaboradores where idFranqueados = '".$idFranqueados."' and blacklist = '0'";
+        $sql = "SELECT * FROM colaboradores where idFranqueados = '".$idFranqueados."' and blacklist = '1'";
         
         $result = mysqli_query($con, $sql);
         
@@ -21,18 +21,18 @@
             <thead>
                 <tr>
 
-                    <th scope="col">Nome</th>
-                    <th scope="col">CPF</th>
-                    <th scope="col">RG</th>
-                    <th scope="col">Admissão&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
-                    <th scope="col">Demissão&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
-                    <th scope="col">Nome da mãe</th>
-                    <th scope="col">Excluir</th>
+                    <th scope="col" class="bg-danger">Nome</th>
+                    <th scope="col" class="bg-danger">CPF</th>
+                    <th scope="col" class="bg-danger">RG</th>
+                    <th scope="col" class="bg-danger">Admissão&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
+                    <th scope="col" class="bg-danger">Demissão&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
+                    <th scope="col" class="bg-danger">Nome da mãe</th>
+                    <th scope="col" class="bg-danger">Excluir</th>
                 </tr>
             </thead>
             <tbody>
                 <?php while($row = mysqli_fetch_array($result)){ 
-                echo "<tr>";
+                echo "<tr class='table-danger'>";
                     echo "<td>".$row["nomeCompleto"]."</td>";
                     echo "<td>".$row["cpf"]."</td>";
                     echo "<td>".$row["rg"]."</td>";

@@ -36,6 +36,9 @@
             <a href="#" title="Consultar colaboradores">
                 <i class="fas fa-tablet-alt consultarColaboradores icon"></i>
             </a>
+            <a href="#" title="Consultar colaboradores">
+                <i class="fas fa-user-slash consultarBlacklist icon"></i>
+            </a>
 
         </div>
     </div>

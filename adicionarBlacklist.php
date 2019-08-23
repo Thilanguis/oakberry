@@ -19,12 +19,12 @@
         
         echo $id = $_GET["id"];
 
-        $excluirColaboradores = "delete from colaboradores where id=".$id;
+        $excluirColaboradores = "update colaboradores set blacklist = '1' where id=".$id;
         
         $result = mysqli_query($con, $excluirColaboradores);
 
             if($result){
-                 header('location:franqueadoLogado.php?cadastrado=Colaborador Excluido com sucesso');
+                 header('location:franqueadoLogado.php?cadastrado=Colaborador excluido com sucesso');
                 }
             
               else{ echo "Erro ao conectar";

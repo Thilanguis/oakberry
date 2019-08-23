@@ -106,11 +106,19 @@ $(document).ready(function () {
     });
 });
 
-//Mostrar formulário cadastro colaboradores
+//Mostrar tabela colaboradores
 $(document).ready(function () {
     $('.tabelaColaboradores').hide();
-    $('.fa-tablet-alt ').click(function () {
+    $('.fa-tablet-alt').click(function () {
         $('.tabelaColaboradores').toggle();
+    });
+});
+
+//Mostrar tabela blacklist
+$(document).ready(function () {
+    $('.tabelaBlacklist').hide();
+    $('.fa-user-slash').click(function () {
+        $('.tabelaBlacklist').toggle();
     });
 });
 
@@ -263,9 +271,10 @@ setTimeout(function () {
     $('#sumirDiv').hide('fast');
 }, 5000);
 
-function excluirColaboradores(id) {
+//Demitir colaborador e adicionar na adicionarBlacklist
+function adicionarBlacklist(id) {
 
     if (confirm('Deseja realmente excluir este Colaborador?')) {
-        location.href = 'blacklist.php?id=' + id;
+        location.href = 'adicionarBlacklist.php?id=' + id;
     }
 }

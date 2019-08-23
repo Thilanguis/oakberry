@@ -19,6 +19,7 @@
         
         $idFranqueados = $_SESSION["idFranqueado"];
         
+        $blacklist     = "0";
         $nomeCompleto  = addslashes($_POST["nomeCompleto"]);
         $cpf           = addslashes($_POST["cpf"]);
         $rg            = addslashes($_POST["rg"]);
@@ -26,7 +27,7 @@
         $nomeDaMae     = addslashes($_POST["nomeDaMae"]); 
 
 
-        $colaboradores = "insert into colaboradores (id, nomeCompleto, cpf, rg, dataAdmissao, dataDemissao, nomeDaMae, idFranqueados) values(null, '".$nomeCompleto."', '".$cpf."', '".$rg."', '".$dataAdmissao."',null , '".$nomeDaMae."', '".$idFranqueados."')";
+        $colaboradores = "insert into colaboradores (id, nomeCompleto, cpf, rg, dataAdmissao, dataDemissao, nomeDaMae, idFranqueados, blacklist) values(null, '".$nomeCompleto."', '".$cpf."', '".$rg."', '".$dataAdmissao."',null , '".$nomeDaMae."', '".$idFranqueados."', '".$blacklist."')";
         
         $campoVazio = $nomeCompleto != "" && $cpf != "" && $rg != "" && $dataAdmissao != "" && $nomeDaMae != "";
         
