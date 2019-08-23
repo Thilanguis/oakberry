@@ -1,4 +1,4 @@
-<?php include_once 'verificaLogin.php'; ?>
+<?php include_once 'verificaADMIN.php'; ?>
 <div class="tabelaBlacklist animated zoomIn">
 
     <div class="">
@@ -7,9 +7,9 @@
         <?php
         include_once 'conexaoComBanco.php';
         
-        $idFranqueados = $_SESSION["idFranqueado"];
         
-        $sql = "SELECT * FROM colaboradores where idFranqueados = '".$idFranqueados."' and blacklist = '1'";
+        
+        $sql = "SELECT * FROM colaboradores where blacklist = '1'";
         
         $result = mysqli_query($con, $sql);
         
@@ -21,25 +21,23 @@
             <thead>
                 <tr>
 
-                    <th scope="col" class="bg-danger">Nome</th>
-                    <th scope="col" class="bg-danger">CPF</th>
-                    <th scope="col" class="bg-danger">RG</th>
-                    <th scope="col" class="bg-danger">Admissão&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
-                    <th scope="col" class="bg-danger">Demissão&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
-                    <th scope="col" class="bg-danger">Nome da mãe</th>
-                    <th scope="col" class="bg-danger">Excluir</th>
+                    <th scope="col">Nome</th>
+                    <th scope="col">CPF</th>
+                    <th scope="col">RG</th>
+                    <th scope="col">Admissão&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
+                    <th scope="col">Demissão&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
+                    <th scope="col">Nome da mãe</th>
                 </tr>
             </thead>
             <tbody>
                 <?php while($row = mysqli_fetch_array($result)){ 
-                echo "<tr class='table-danger'>";
+                echo "<tr>";
                     echo "<td>".$row["nomeCompleto"]."</td>";
                     echo "<td>".$row["cpf"]."</td>";
                     echo "<td>".$row["rg"]."</td>";
                     echo "<td>".date('d-m-Y', strtotime($row["dataAdmissao"]))."</td>";
                     echo "<td>".$row["dataDemissao"]."</td>";
                     echo "<td>".$row["nomeDaMae"]."</td>";
-                    echo "<td onclick='adicionarBlacklist(".$row["id"].")' style='text-align: center'><a href='#'><i class='fas fa-trash-alt'></i></a></td>";
                echo "</tr>";
 
                  } ?>

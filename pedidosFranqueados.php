@@ -1,22 +1,50 @@
-<nav>
-    <div id="menuPedidos" class="menuPedidos animated zoomIn">
-        <i id="xPedidos" class="fas fa-times menuPedidos"></i>
-        <ul class="">
-            <li class="active menuPedidos"><a href="#">
-                    <h6>Uniformes</h6>
-                </a></li>
-            <li class="menuPedidos"><a href="#">
-                    <h6>Kit de medidas</h6>
-                </a></li>
-            <li class="menuPedidos"><a href="#">
-                    <h6>Letrex</h6>
-                </a></li>
-            <li class="menuPedidos"><a href="#">
-                    <h6>Tela cardápio digital</h6>
-                </a></li>
-            <li class="menuPedidos"><a href="#">
-                    <h6>Leitor de nota falsa</h6>
-                </a></li>
-        </ul>
+<p class="menuPedidos animated zoomIn">
+    <a id="pedidos" class="btn btn-primary" data-toggle="collapse" href="#multiCollapseExample1" role="button" aria-expanded="false" aria-controls="multiCollapseExample1">PEDIDOS</a>
+    <button id="solicitacoes" class="btn btn-primary" type="button" data-toggle="collapse" data-target="#multiCollapseExample2" aria-expanded="false" aria-controls="multiCollapseExample2">SOLICITAÇÕES</button>
+
+</p>
+<div class="row">
+    <div class="col">
+        <div class="collapse multi-collapse" id="multiCollapseExample1">
+            <div class="card card-body">
+                <ul>
+                    <a href="" class="listaPedidos">
+                        <li class="listaPedidos">Artes</li>
+                    </a>
+                    <a href="" class="listaPedidos">
+                        <li class="listaPedidos">Reunião / Consultoria</li>
+                    </a>
+                </ul>
+            </div>
+        </div>
     </div>
-</nav>
+    <div class="col">
+        <div class="collapse multi-collapse" id="multiCollapseExample2">
+            <div class="card card-body">
+                <ul>
+                    <a href="" class="listaPedidos">
+                        <li class="listaPedidos">Uniformes</li>
+                    </a>
+                    <a href="" class="listaPedidos">
+                        <li class="listaPedidos">Kit medidor</li>
+                    </a>
+                    <a href="" class="listaPedidos">
+                        <li class="listaPedidos">Bisnaga</li>
+                    </a>
+                    <a href="" class="listaPedidos">
+                        <li class="listaPedidos">Fatiador de banana</li>
+                    </a>
+                    <a href="" class="listaPedidos">
+                        <li class="listaPedidos">Leitor de nota falsa</li>
+                    </a>
+                    <a href="" class="listaPedidos">
+                        <li class="listaPedidos">letrex</li>
+                    </a>
+                    <a href="" class="listaPedidos">
+                        <li class="listaPedidos">Cardápio led</li>
+                    </a>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>

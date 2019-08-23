@@ -63,8 +63,6 @@
 
         <?php include_once 'consultarColaboradores.php' ?>
 
-        <?php include_once 'consultarBlacklistColaboradores.php' ?>
-
     </div>
 
     <?php include_once 'footer.php'; ?>

@@ -1,5 +1,3 @@
-<!-- backup cadastro franqueados antigo -->
-
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -12,8 +10,8 @@
 
     <?php
     include_once 'head.php';
-    include_once 'funcoesProjeto.php';
     session_start();
+    include_once 'funcoesProjeto.php';
     ?>
 
     <link rel="stylesheet" href="css/styleCadastro.css">

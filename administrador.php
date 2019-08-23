@@ -132,7 +132,7 @@
                         echo "<td class='8' style='text-align: center;'>".$row["tipoDeLoja"]."</td>";
                         echo "<td class='9' style='text-align: center;'>".$row["emailDaLoja"]."</td>";
                         echo "<td class='10' style='text-align: center;'>".$row["shopping"]."</td>";
-                        echo "<td class='11' style='text-align: center;'>".$row["administradora"]."</td>";
+                        echo "<td class='11' style='text-align: center;'>".$row["nomeDaLoja"]."</td>";
                         echo "<td class='12' style='text-align: center;'>".$row["enderecoMatriz"]."</td>";
                         echo "<td class='13' style='text-align: center;'>".$row["complemento"]."</td>";
                         echo "<td class='14' style='text-align: center;'>".$row["bairro"]."</td>";
@@ -158,6 +158,8 @@
                 }
             }
         ?>
+
+        <?php include_once 'consultarBlacklistColaboradores.php' ?>
 
     </div>
 

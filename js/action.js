@@ -50,14 +50,6 @@ $(document).ready(function () {
     });
 });
 
-//Fechar menu pedidos
-$(document).ready(function () {
-    $('.menuPedidos').hide();
-    $('.fa-times').click(function () {
-        $('.menuPedidos').hide();
-    });
-});
-
 //Mostrar menu dúvidas
 $(document).ready(function () {
     $('.accordion').hide();
@@ -111,14 +103,6 @@ $(document).ready(function () {
     $('.tabelaColaboradores').hide();
     $('.fa-tablet-alt').click(function () {
         $('.tabelaColaboradores').toggle();
-    });
-});
-
-//Mostrar tabela blacklist
-$(document).ready(function () {
-    $('.tabelaBlacklist').hide();
-    $('.fa-user-slash').click(function () {
-        $('.tabelaBlacklist').toggle();
     });
 });
 

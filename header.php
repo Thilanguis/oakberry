@@ -1,19 +1,23 @@
 <header id="menu">
-    <a id="home" href="index.php">Home</a>
-    <a href="formCadastroFranquiados.php">Cadastro</a>
+    <a class="itensMenu" id="home" href="index.php">
+        <li class="itensMenu">Home</li>
+    </a>
+    <a class="itensMenu" href="formCadastroFranquiados.php">
+        <li class="itensMenu">Cadastro</li>
+    </a>
     <img id="logo" src="img/oak-retina.png" alt="">
 
     <?php if(isset($_SESSION["login"]) && isset($_SESSION["statusEmail"])){
      if($_SESSION["login"] == true && $_SESSION["statusEmail"] == "1") {?>
-    <a href="franqueadoLogado.php">
-        Menu
+    <a class="itensMenu" href="franqueadoLogado.php">
+        <li class="itensMenu">Menu</li>
     </a>
     <?php }
 }
 
     else { ?>
-    <a class="btn-none" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-        Login
+    <a class="btn-none itensMenu" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <li class="itensMenu">Login</li>
     </a>
     <?php } ?>
 
@@ -47,5 +51,7 @@
         </form>
         <div class="dropdown-divider"></div>
     </div>
-    <a href="administrador.php">Administrador</a>
+    <a class="itensMenu" href="administrador.php">
+        <li class="itensMenu">Administrador</li>
+    </a>
 </header>

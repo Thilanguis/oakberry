@@ -1,4 +1,4 @@
-<?php include_once 'verificaLogin.php'; ?>
+<?php include_once 'verificaLogin.php'; include_once 'funcoesProjeto.php'; ?>
 <div class="formularioColaboradores animated zoomIn">
 
     <div class="">
@@ -24,7 +24,7 @@
 
                 <div class="form-group col-md-6">
                     <label for="inputState">CPF<div id="asteristico">*</div></label>
-                    <input type="text" class="form-control" id="cpf" name="cpf" value="<?php
+                    <input type="text" class="form-control" id="cpf" name="cpf" onblur="if(!TestaCPF(this.value)){alert('CPF Informado é inválido'); this.value='';};" value="<?php
                 if(isset($_GET["cpf"]))
                 {
                  echo $msg = $_GET["cpf"]; }  ?>">
