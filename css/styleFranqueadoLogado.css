@@ -67,12 +67,23 @@ main {
     margin-top: 15px;
 }
 
+#pedidos {
+    margin-left: 280px;
+    text-align: center;
+}
+
+#solicitacoes {
+    ;
+    margin-left: 210px;
+}
+
 .listaPedidos {
     font-size: 20px;
     color: rgba(73, 29, 86, 1);
     font-weight: bold;
     transition: all 0.5s;
     cursor: pointer;
+    right: 0;
 }
 
 .listaPedidos:hover {
@@ -221,6 +232,12 @@ h4 {
 #h4duvidas {
     text-align: center;
     margin: 50px 0;
+}
+
+#h4pedidos {
+    text-align: center;
+    margin-top: 50px;
+    margin-right: 50px;
 }
 
 #btnCadastrarFraquiados {
