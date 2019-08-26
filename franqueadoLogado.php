@@ -53,6 +53,12 @@
 
         <?php include_once 'pedidosFranqueados.php'; ?>
         <?php include_once 'modalUniformes.php'; ?>
+        <?php include_once 'modalKitMedidor.php'; ?>
+        <?php include_once 'modalBisnaga.php'; ?>
+        <?php include_once 'modalFatiadorDeBanana.php'; ?>
+        <?php include_once 'modalLeitorDeNotaFalsa.php'; ?>
+        <?php include_once 'modalLetrex.php'; ?>
+        <?php include_once 'modalCardapioLed.php'; ?>
 
         <?php include_once 'ajudaFranqueados.php'; ?>
 

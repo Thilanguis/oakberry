@@ -7,7 +7,7 @@
             <div class="modal-header">
 
                 <div id="uniformes">
-                    <h4 style="margin-left: 330px; margin-bottom: 50px;">Uniformes</h4>
+                    <h4 style="margin-left: 330px; margin-bottom: 50px;">Pedido de uniformes</h4>
                 </div>
 
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
@@ -17,7 +17,7 @@
 
             <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 
-            <h5 style="text-align: center; margin-top: 5px">Usuário: <?php
+            <h5 style="text-align: center; margin-top: 5px; margin-bottom: 40px;">Usuário: <?php
                 
                 include_once 'conexaoComBanco.php';
                 
@@ -54,7 +54,7 @@
                 </div>
                 <div class="form-row" style="margin-left: 123px; margin-bottom: 10px;">
                     <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="M">
-                    <label class="form-check-label" for="inlineCheckbox1" style="margin-right: 20px;">M</label>
+                    <label class="form-check-label" for="inlineCheckbox1" style="margin-right: 19px;">M</label>
                     <input type="number" class="col-sm-1">
                 </div>
                 <div class="form-row" style="margin-left: 123px; margin-bottom: 10px;">

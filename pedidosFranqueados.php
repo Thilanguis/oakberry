@@ -26,25 +26,25 @@
             <div class="collapse multi-collapse" id="multiCollapseExample2">
                 <div class="card card-body">
                     <ul>
-                        <a href="#" data-toggle='modal' data-target='#uniformes' class="listaPedidos">
+                        <a href="#" data-toggle="modal" data-target="#uniformes" class="listaPedidos">
                             <li class="listaPedidos">Uniformes</li>
                         </a>
-                        <a href="" class="listaPedidos">
+                        <a href="#" class="listaPedidos" data-toggle="modal" data-target="#kitMedidor">
                             <li class="listaPedidos">Kit medidor</li>
                         </a>
-                        <a href="" class="listaPedidos">
+                        <a href="#" data-toggle="modal" data-target="#bisnaga" class="listaPedidos">
                             <li class="listaPedidos">Bisnaga</li>
                         </a>
-                        <a href="" class="listaPedidos">
+                        <a href="#" data-toggle="modal" data-target="#fatiadorDeBanana" class="listaPedidos">
                             <li class="listaPedidos">Fatiador de banana</li>
                         </a>
-                        <a href="" class="listaPedidos">
+                        <a href="#" data-toggle="modal" data-target="#leitorNotaFalsa" class="listaPedidos">
                             <li class="listaPedidos">Leitor de nota falsa</li>
                         </a>
-                        <a href="" class="listaPedidos">
-                            <li class="listaPedidos">letrex</li>
+                        <a href="#" data-toggle="modal" data-target="#letrex" class="listaPedidos">
+                            <li class="listaPedidos">Letrex</li>
                         </a>
-                        <a href="" class="listaPedidos">
+                        <a href="#" data-toggle="modal" data-target="#cardapioLed" class="listaPedidos">
                             <li class="listaPedidos">Cardápio led</li>
                         </a>
                     </ul>
