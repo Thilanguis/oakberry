@@ -26,7 +26,7 @@
             <div class="collapse multi-collapse" id="multiCollapseExample2">
                 <div class="card card-body">
                     <ul>
-                        <a href="#" class="listaPedidos">
+                        <a href="#" data-toggle='modal' data-target='#uniformes' class="listaPedidos">
                             <li class="listaPedidos">Uniformes</li>
                         </a>
                         <a href="" class="listaPedidos">
