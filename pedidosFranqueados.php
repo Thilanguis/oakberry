@@ -3,8 +3,8 @@
 <div class="menuPedidos animated zoomIn">
     <h4 id="h4pedidos">Faça seus pedidos</h4>
     <p>
-        <button id="pedidos" class="btn btn-none listaPedidos" data-toggle="collapse" href="#multiCollapseExample1" role="button" aria-expanded="false" aria-controls="multiCollapseExample1">PEDIDOS</button>
-        <button id="solicitacoes" class="btn btn-none listaPedidos" type="button" data-toggle="collapse" data-target="#multiCollapseExample2" aria-expanded="false" aria-controls="multiCollapseExample2">SOLICITAÇÕES</button>
+        <button id="pedidos" class="btn btn-none listaPedidos" data-toggle="collapse" href="#multiCollapseExample1" role="button" aria-expanded="false" aria-controls="multiCollapseExample1">SOLICITAÇÕES</button>
+        <button id="solicitacoes" class="btn btn-none listaPedidos" type="button" data-toggle="collapse" data-target="#multiCollapseExample2" aria-expanded="false" aria-controls="multiCollapseExample2">PEDIDOS</button>
 
     </p>
     <div class="row">
