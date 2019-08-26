@@ -31,38 +31,50 @@
         
         $campoVazio = $nomeCompleto != "" && $cpf != "" && $rg != "" && $dataAdmissao != "" && $nomeDaMae != "";
         
-        $verificandoEmailExistente = "select cpf from colaboradores where cpf='".$cpf."'";
+        $verificandoCpfExistente = "select cpf from colaboradores where cpf='".$cpf."'";
         
-        $result = mysqli_query($con, $verificandoEmailExistente);
+        $verificandoCpfExistenteBlacklist = "select blacklist, cpf from colaboradores where cpf='".$cpf."' and blacklist ='1'";
         
+        $result = mysqli_query($con, $verificandoCpfExistente);
+
         $registro = mysqli_num_rows($result);
-        
+
         $row = mysqli_fetch_array($result);
         
+        $result1 = mysqli_query($con, $verificandoCpfExistenteBlacklist);
+
+        $registro1 = mysqli_num_rows($result1);
+
+        $row1 = mysqli_fetch_array($result1);
         
-        
-if($registro == 0) {
-        if($campoVazio){
-            if(mysqli_query($con, $colaboradores)){
-                 header('location:franqueadoLogado.php?cadastrado=Colaborador adicionado com sucesso');
+if($registro1 == 0){    
+    if($registro == 0) {
+            if($campoVazio){
+                if(mysqli_query($con, $colaboradores)){
+                     header('location:franqueadoLogado.php?cadastrado=Colaborador adicionado com sucesso');
+                    }
+
+                  else{ echo "Erro ao conectar";
+                        echo mysqli_error($con);
+                    }
                 }
-            
-              else{ echo "Erro ao conectar";
-                    echo mysqli_error($con);
+
+                else{
+                    header('location:franqueadoLogado.php?msg=Preencher todos os campos!&nomeCompleto='.$nomeCompleto.'&cpf='.$cpf.'&rg='.$rg.'&dataAdmissao='.$dataAdmissao.'&nomeDaMae='.$nomeDaMae.'');
+                   }
                 }
-            }
-        
-            else{
-                header('location:franqueadoLogado.php?msg=Preencher todos os campos!&nomeCompleto='.$nomeCompleto.'&cpf='.$cpf.'&rg='.$rg.'&dataAdmissao='.$dataAdmissao.'&nomeDaMae='.$nomeDaMae.'');
-               }
-            }
     
      
-else{
+    else{
     header('location:franqueadoLogado.php?msg=CPF já cadastrado!&nomeCompleto='.$nomeCompleto.'&cpf='.$cpf.'&rg='.$rg.'&dataAdmissao='.$dataAdmissao.'&nomeDaMae='.$nomeDaMae.'');
-              echo "Nome de usuário já existe!";
+    echo "Nome de usuário já existe!";
+    }   
 }
-   
+else{
+    header('location:franqueadoLogado.php?msg=CPF na blacklist!&nomeCompleto='.$nomeCompleto.'&cpf='.$cpf.'&rg='.$rg.'&dataAdmissao='.$dataAdmissao.'&nomeDaMae='.$nomeDaMae.'');
+    echo "Nome de usuário já existe!";
+}
+        
         mysqli_close($con);
         ?>
 
