@@ -78,8 +78,8 @@ $verificaInputVazio = $quantidadeBone != "" || $quantidadeCamisaP != "" || $quan
 if($verificaInputVazio){
     header('location:franqueadoLogado.php?cadastrado=Pedido enviado com sucesso!');
         $assunto = "Pedido de uniforme";
-        $mensagem = "Pedido de uniforme ". $bone ;
-        $header = "From: Pedidos de Uniforme" . ;
+        $mensagem = "Pedido de uniforme: ". $bone ;
+        $header = "From: Pedidos de Uniforme" ;
                 
                 mail("jefferson@oakberry.rio", $assunto, $mensagem, $header);
 }
