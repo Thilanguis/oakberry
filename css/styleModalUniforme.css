@@ -1,3 +1,7 @@
 #itensUniforme {
     margin-left: 50px !important;
 }
+
+#limpeza {
+    clear: both;
+}

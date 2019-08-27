@@ -262,3 +262,69 @@ function adicionarBlacklist(id) {
         location.href = 'adicionarBlacklist.php?id=' + id;
     }
 }
+
+//Mostrar tamanho e esconder boné
+function ShowHideBone(bone) {
+    var quantidadeBone = document.getElementById("quantidadeBone");
+    quantidadeBone.style.display = bone.checked ? "block" : "none";
+}
+
+//Mostrar tamanho e esconder tamanho camisas
+function ShowHideCamisa(camisa) {
+    var camisaP = document.getElementById("camisaP");
+    camisaP.style.display = camisa.checked ? "block" : "none";
+}
+
+//Mostrar tamanho e esconder quantidade camisas P
+function ShowHideQuantidadeP(tamanhoCamisaP) {
+    var quantidadeCamisaP = document.getElementById("quantidadeCamisaP");
+    quantidadeCamisaP.style.display = tamanhoCamisaP.checked ? "block" : "none";
+}
+
+//Mostrar tamanho e esconder quantidade camisas M
+function ShowHideQuantidadeM(tamanhoCamisaM) {
+    var quantidadeCamisaM = document.getElementById("quantidadeCamisaM");
+    quantidadeCamisaM.style.display = tamanhoCamisaM.checked ? "block" : "none";
+}
+
+//Mostrar tamanho e esconder quantidade camisas G
+function ShowHideQuantidadeG(tamanhoCamisaG) {
+    var quantidadeCamisaG = document.getElementById("quantidadeCamisaG");
+    quantidadeCamisaG.style.display = tamanhoCamisaG.checked ? "block" : "none";
+}
+
+//Mostrar tamanho e esconder moletom
+function ShowHideMoletom(moletom) {
+    var moletomP = document.getElementById("moletomP");
+    moletomP.style.display = moletom.checked ? "block" : "none";
+}
+
+//Mostrar tamanho e esconder quantidade camisas P
+function ShowHideQuantidadeMoletomP(tamanhoMoletomP) {
+    var quantidadeMoletomP = document.getElementById("quantidadeMoletomP");
+    quantidadeMoletomP.style.display = tamanhoMoletomP.checked ? "block" : "none";
+}
+
+//Mostrar tamanho e esconder quantidade camisas M
+function ShowHideQuantidadeMoletomM(tamanhoMoletomM) {
+    var quantidadeMoletomM = document.getElementById("quantidadeMoletomM");
+    quantidadeMoletomM.style.display = tamanhoMoletomM.checked ? "block" : "none";
+}
+
+//Mostrar tamanho e esconder quantidade camisas G
+function ShowHideQuantidadeMoletomG(tamanhoMoletomG) {
+    var quantidadeMoletomG = document.getElementById("quantidadeMoletomG");
+    quantidadeMoletomG.style.display = tamanhoMoletomG.checked ? "block" : "none";
+}
+
+//Mostrar tamanho e esconder crachá
+function ShowHideCracha(cracha) {
+    var quantidadeCracha = document.getElementById("quantidadeCracha");
+    quantidadeCracha.style.display = cracha.checked ? "block" : "none";
+}
+
+function pedidoUniforme() {
+    if (confirm('Deseja solicitar os pedidos selecionados?')) {
+        location.href = 'pedidoUniforme.php';
+    }
+}
