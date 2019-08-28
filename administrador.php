@@ -95,6 +95,7 @@
             <table id="" class="table table-light table-sm table-hover animated zoomIn">
                 <thead>
                     <tr>
+                        <th class="" style="color: rgba(73, 29, 86, 1); text-align: center;">Status conta</th>
                         <th class="1" style="color: rgba(73, 29, 86, 1); text-align: center;">Franqueado</th>
                         <th class="2" style="color:  rgba(73, 29, 86, 1); text-align: center;">Email</th>
                         <th class="3" style="color:  rgba(73, 29, 86, 1); text-align: center;">Telefone</th>
@@ -122,6 +123,7 @@
                     while($row = mysqli_fetch_array($result))
                     { 
                         echo "<tr>";
+                        echo "<th class='' style='text-align: center;'>".$row["statusEmail"]."</th>";
                         echo "<th class='1' style='text-align: center;'>".$row["nomePrimeiroFranqueado"]."</th>";
                         echo "<td class='2' style='text-align: center;'>".$row["emailPrimeiroFranqueado"]."</td>";
                         echo "<td class='3' style='text-align: center;'>".$row["telefonePrimeiroFranqueado"]."</td>";
@@ -160,6 +162,8 @@
         ?>
 
         <?php include_once 'consultarBlacklistColaboradores.php' ?>
+
+        <?php include_once 'aguardandoAtivacaoDeConta.php' ?>
 
     </div>
 
