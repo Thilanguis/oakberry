@@ -62,7 +62,6 @@
     
     ?>
 
-
         <h4>Finalize seu cadastro</h4>
         <form method="post" action="finalizarCadastro.php">
 
